@@ -1,0 +1,49 @@
+.content {
+  padding: 60px 0 50px 0;
+  background-size: initial;
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow: scroll;
+}
+.section {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 220px;
+  font-size: 12px;
+}
+.section .article {
+  width: 380px;
+  line-height: 1.6;
+  position: absolute;
+  top: 15px;
+}
+.section .title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.section.odd {
+  text-align: right;
+}
+.section.odd .title {
+  margin-right: 5px;
+}
+.section.odd .article {
+  right: 240px;
+}
+.section.even {
+  text-align: left;
+}
+.section.even .title {
+  margin-left: 5px;
+}
+.section.even .article {
+  left: 250px;
+}
+.section .pic {
+  width: 220px;
+  height: 220px;
+}
+.bottom-nav {
+  box-shadow: 0 0 20px #000;
+}

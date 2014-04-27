@@ -44,6 +44,10 @@ a {
 .content .content-inner .panel .panel-inner {
   padding: 40px;
 }
+.content .content-inner .panel .panel-inner img {
+  width: 100%;
+  display: block;
+}
 .bottom-nav {
   background: url("../img/bg.png");
   position: fixed;

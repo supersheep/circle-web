@@ -1,0 +1,42 @@
+width = 220px
+
+.content
+    padding: 60px 0 50px 0
+    background-size: initial
+    background-position: top center
+    background-repeat: no-repeat
+    overflow: scroll
+.section
+    position: relative
+    margin: 0 auto
+    margin-bottom: 50px
+    width: 220px
+    font-size: 12px
+    .article
+        width: 380px
+        line-height: 1.6
+        position: absolute
+        top: 15px
+    .title
+        font-size: 26px
+        margin-bottom: 10px
+    &.odd
+        text-align: right
+        .title
+            margin-right: 5px
+        .article
+            right: width + 20px
+    &.even
+        text-align: left
+        .title
+            margin-left: 5px
+        .article
+            left: width + 30px
+
+    .pic
+        width: width
+        height: width
+
+
+.bottom-nav
+    box-shadow: 0 0 20px #000
