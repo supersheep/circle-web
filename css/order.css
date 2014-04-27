@@ -1,0 +1,81 @@
+.order-head {
+  zoom: 1;
+  font-size: 13px;
+}
+.order-head:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.order-head .breadcrumb {
+  zoom: 1;
+  float: left;
+  margin-bottom: 60px;
+}
+.order-head .breadcrumb:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.order-head .breadcrumb li {
+  float: left;
+  margin-right: 40px;
+  list-style-type: disc;
+}
+.order-head .welcome {
+  float: right;
+  text-align: right;
+}
+.orders .order {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.orders .order .title {
+  border-bottom: 1px solid #34a68c;
+  padding-bottom: 7px;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.orders .order .detail {
+  zoom: 1;
+  position: relative;
+}
+.orders .order .detail:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.orders .order .detail .pic {
+  float: left;
+  padding: 10px;
+}
+.orders .order .detail .table {
+  width: 750px;
+  padding: 10px;
+}
+.orders .order .detail .table td {
+  min-width: 100px;
+  padding: 15px 0;
+}
+.orders .order .detail .status {
+  border-radius: 2px;
+  border: 1px solid #34a68c;
+  text-align: center;
+  background-color: #050505;
+  padding: 3px 0;
+}
+.orders .order .goodflow {
+  position: relative;
+  background-color: #050505;
+}
+.orders .order .goodflow td {
+  padding: 10px 30px;
+}
+.orders .order .goodflow .arrow {
+  background-image: url("/img/arrow.png");
+  width: 16px;
+  height: 18px;
+  position: absolute;
+  top: -17px;
+  right: 100px;
+}

@@ -1,7 +1,8 @@
-cyan=#34a68c
+@import "./variables"
 body
+    font-family: "Hiragino Sans GB","Microsoft Yahei", sans-serif;
     color: cyan
-    font-family: sans-serif
+    line-height: 1.5
     background: url("../img/bg.png")
 
 body,ul,li,h1,h2,h3,h4,p
@@ -28,6 +29,7 @@ a
     .content-inner
         height: 100%
         .panel
+            background-image: url("../img/bg.png")
             margin: 0 auto
             width: 1000px
             height: 100%
@@ -35,7 +37,7 @@ a
             overflow: scroll
             .panel-inner
                 padding: 40px
-                img
+                .bigimg
                     width: 100%
                     display: block
             
@@ -68,6 +70,26 @@ a
                 color: cyan
                 font-size: 12px
                 float: left
+
+.scrollable
+    overflow: hidden !important
+    .scroll-bar.vertical
+        width: 3px
+        margin: 40px 20px 40px 10px
+        border-radius: 5px
+        box-shadow:  0 0 10px rgba(255,255,255,0.2) 
+        padding: 2px
+        .thumb
+            background-color: #34a68c
+            width: 3px!important
+
+._bling
+    font-weight: bold
+    .text
+        background-image: -webkit-linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        -webkit-animation: bling 3s infinite
 
 @keyframes bling
     0%

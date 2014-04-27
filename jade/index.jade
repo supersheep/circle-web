@@ -5,7 +5,13 @@ block style
 block content
     .panel
         .panel-inner
-            img(src="/img/detail.jpg")
-            img(src="/img/detail.jpg")
-            img(src="/img/detail.jpg")
-            img(src="/img/detail.jpg")
+            img.bigimg(src="/img/detail.jpg")
+            img.bigimg(src="/img/detail.jpg")
+            img.bigimg(src="/img/detail.jpg")
+            img.bigimg(src="/img/detail.jpg")
+
+block script
+    script.
+        $(window).load(function(){
+            $(".panel").customScrollbar();
+        });

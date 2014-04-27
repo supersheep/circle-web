@@ -1,0 +1,52 @@
+extend layout
+
+block style
+    link(rel="stylesheet",href="/css/login.css") 
+
+block content
+    .panel
+        .panel-inner
+            img.logo(src="/img/logo.png")
+            form
+                .row
+                    input#email(type='email',placeholder="用户名 / 邮箱")
+                .row
+                    input#password(type="password",placeholder="密码")
+                .row
+                    input.submit(type="submit",value="")
+            .others
+                .new.bling
+                    a.text(href="#") 新账户注册
+                .forget-password
+                    a.text(href="#") 忘记密码？
+
+block script
+    script(src="/js/placeholder.js")
+    script.
+        $(".row").on("click",function(){
+            $(".row").removeClass("active");
+            $(this).addClass("active");
+        });
+        $(".row input").on("blur",function(){
+            $(".row").removeClass("active");
+        });
+
+        $(".row input").placeholder();
+
+        $("form").on("submit",function(){
+            var email = $("#email").val().trim();
+            var password = $("#password").val().trim();
+            if(!email){
+                alert("请输入邮箱");
+                return false;
+            }
+            if(!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)){
+                alert("邮箱格式不符合规范");
+                return false;
+            }
+            if(!password){
+                alert("请输入密码");
+                return false;
+            }
+            return true;
+        });

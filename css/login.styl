@@ -1,0 +1,58 @@
+@import "mixins"
+@import "variables"
+cyan = #31ae92
+.content .content-inner 
+    position: relative
+    .panel
+        background: #98d7c9
+        background: rgba(255,255,255,0.5)
+        width: 330px
+        border-radius: 10px
+        .panel-inner
+            position: relative
+            padding: 40px
+            .logo
+                margin: 0 auto
+                display: block
+                margin-bottom: 30px
+            .row
+                position: relative
+                margin-bottom: 20px 
+                input
+                    padding: 5px 10px
+                    font-size: 17px
+                    box-sizing: border-box
+                    display: block
+                    height: 38px
+                    border: 1px solid #fff
+                    color: cyan
+                    width: 100%
+                .submit
+                    cursor: pointer
+                    background: url("/img/login.png")
+                    width: 71px
+                    height: 71px
+                    border: none
+                    margin: 50px auto
+                    display: block
+                    text-index: -999px
+            .row.active
+                input
+                    background-color: cyan
+                    border-color: #fff
+                    color: #fff
+
+.others
+    clearfix()
+    font-size: 12px
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 10px
+    padding: 0px
+    .new
+        margin-left: 20px
+        float: left
+    .forget-password
+        margin-right: 20px
+        float: right

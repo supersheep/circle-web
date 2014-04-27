@@ -1,0 +1,69 @@
+.content .content-inner {
+  position: relative;
+}
+.content .content-inner .panel {
+  background: #98d7c9;
+  background: rgba(255,255,255,0.5);
+  width: 330px;
+  border-radius: 10px;
+}
+.content .content-inner .panel .panel-inner {
+  position: relative;
+  padding: 40px;
+}
+.content .content-inner .panel .panel-inner .logo {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 30px;
+}
+.content .content-inner .panel .panel-inner .row {
+  position: relative;
+  margin-bottom: 20px;
+}
+.content .content-inner .panel .panel-inner .row input {
+  padding: 5px 10px;
+  font-size: 17px;
+  box-sizing: border-box;
+  display: block;
+  height: 38px;
+  border: 1px solid #fff;
+  color: #31ae92;
+  width: 100%;
+}
+.content .content-inner .panel .panel-inner .row .submit {
+  cursor: pointer;
+  background: url("/img/login.png");
+  width: 71px;
+  height: 71px;
+  border: none;
+  margin: 50px auto;
+  display: block;
+  text-index: -999px;
+}
+.content .content-inner .panel .panel-inner .row.active input {
+  background-color: #31ae92;
+  border-color: #fff;
+  color: #fff;
+}
+.others {
+  zoom: 1;
+  font-size: 12px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  padding: 0px;
+}
+.others:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.others .new {
+  margin-left: 20px;
+  float: left;
+}
+.others .forget-password {
+  margin-right: 20px;
+  float: right;
+}

@@ -1,0 +1,56 @@
+@import "variables"
+@import "mixins"
+.order-head
+    clearfix()
+    font-size: 13px
+    .breadcrumb
+        clearfix()
+        float: left
+        margin-bottom: 60px
+        li
+            float: left
+            margin-right: 40px
+            list-style-type: disc
+    .welcome
+        float: right
+        text-align: right
+
+.orders
+    .order
+        font-size: 12px
+        margin-bottom: 30px
+        .title
+            border-bottom: 1px solid cyan
+            padding-bottom: 7px
+            margin-bottom: 5px
+            font-size: 13px
+        .detail
+            clearfix()
+            position: relative
+            .pic
+                float: left
+                padding: 10px
+            .table
+                width: 750px
+                padding: 10px
+                td 
+                    min-width: 100px
+                    padding:15px 0
+            .status
+                border-radius: 2px
+                border: 1px solid cyan
+                text-align: center
+                background-color: #050505
+                padding: 3px 0
+        .goodflow
+            position: relative
+            background-color: #050505
+            td
+                padding: 10px 30px
+            .arrow
+                background-image: url("/img/arrow.png")
+                width: 16px
+                height: 18px
+                position: absolute
+                top: -17px
+                right: 100px

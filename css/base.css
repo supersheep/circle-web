@@ -1,6 +1,7 @@
 body {
+  font-family: "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
   color: #34a68c;
-  font-family: sans-serif;
+  line-height: 1.5;
   background: url("../img/bg.png");
 }
 body,
@@ -35,6 +36,7 @@ a {
   height: 100%;
 }
 .content .content-inner .panel {
+  background-image: url("../img/bg.png");
   margin: 0 auto;
   width: 1000px;
   height: 100%;
@@ -44,7 +46,7 @@ a {
 .content .content-inner .panel .panel-inner {
   padding: 40px;
 }
-.content .content-inner .panel .panel-inner img {
+.content .content-inner .panel .panel-inner .bigimg {
   width: 100%;
   display: block;
 }
@@ -82,6 +84,29 @@ a {
   color: #34a68c;
   font-size: 12px;
   float: left;
+}
+.scrollable {
+  overflow: hidden !important;
+}
+.scrollable .scroll-bar.vertical {
+  width: 3px;
+  margin: 40px 20px 40px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  padding: 2px;
+}
+.scrollable .scroll-bar.vertical .thumb {
+  background-color: #34a68c;
+  width: 3px !important;
+}
+._bling {
+  font-weight: bold;
+}
+._bling .text {
+  background-image: -webkit-linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: bling 3s infinite;
 }
 @-moz-keyframes bling {
   0% {
