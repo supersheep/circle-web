@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        block vars
+        title=title
+        link(rel="stylesheet",href="/css/base.css")
+        script(src="/js/zepto.js")
+        block style
+    body
+        block script
+        div.content
+            div.content-inner
+                block content
+        .bottom-nav
+            .bottom-nav-inner
+                .logo CIRCLE
+                ul.nav
+                    li 
+                        a(href="/html/collection.html") 轻彩宝
+                    li 
+                        a(href="/html/collection.html") 高级彩宝
+                    li 
+                        a(href="/html/brand.html") 品牌故事
+                    li 
+                        a(href="/html/my.html") My CIRCLE

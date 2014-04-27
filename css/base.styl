@@ -1,0 +1,74 @@
+cyan=#34a68c
+body
+    color: cyan
+    font-family: sans-serif
+    background: url("../img/bg.png")
+
+body,ul,li,h1,h2,h3,h4,p
+    margin: 0
+    padding: 0
+
+
+li
+    list-style-type: none
+
+a
+    color: cyan
+    text-decoration: none
+
+.content
+    top: 40px
+    bottom: 75px
+    width: 100%
+    padding: 40px 0
+    overflow: hidden
+    position: absolute
+    background-image: url("/img/tile.png")
+    background-size: contain
+    .content-inner
+        height: 100%
+        .panel
+            margin: 0 auto
+            width: 1000px
+            height: 100%
+            background-color: #212526
+            overflow: scroll
+            .panel-inner
+                padding: 40px
+            
+.bottom-nav
+    background: url("../img/bg.png")
+    position: fixed
+    bottom: 0
+    height: 75px
+    z-index: 99
+    width: 100%
+    .logo
+        line-height: 75px
+        font-size: 18px
+        float: left
+    .bottom-nav-inner
+        width: 1000px
+        margin: 0 auto
+        zoom: 1
+        &:after
+            display: block
+            clear: both
+            content: ""
+        .nav
+            float: right
+            line-height: 75px
+            font-size: 12px
+            li
+                width: 100px
+                text-align: center
+                color: cyan
+                font-size: 12px
+                float: left
+
+@keyframes bling
+    0%
+        background-position: 90px 0
+
+    40%
+        background-position: 0 0
