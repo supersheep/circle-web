@@ -99,10 +99,10 @@ a {
   background-color: #34a68c;
   width: 3px !important;
 }
-._bling {
+.bling {
   font-weight: bold;
 }
-._bling .text {
+.bling .text {
   background-image: -webkit-linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
