@@ -32,21 +32,19 @@ a {
   background-image: url("/img/tile.png");
   background-size: contain;
 }
-.content .content-inner {
-  height: 100%;
-}
-.content .content-inner .panel {
+.content .panel {
   background-image: url("../img/bg.png");
   margin: 0 auto;
-  width: 1000px;
-  height: 100%;
+  padding: 40px;
+  width: 920px;
+  height: 400px;
   background-color: #212526;
+}
+.content .panel .panel-inner {
+  height: 100%;
   overflow: scroll;
 }
-.content .content-inner .panel .panel-inner {
-  padding: 40px;
-}
-.content .content-inner .panel .panel-inner .bigimg {
+.content .panel .panel-inner .bigimg {
   width: 100%;
   display: block;
 }
@@ -90,7 +88,7 @@ a {
 }
 .scrollable .scroll-bar.vertical {
   width: 3px;
-  margin: 40px 20px 40px 10px;
+  margin: 0 20px 0 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
   padding: 2px;
@@ -103,7 +101,7 @@ a {
   font-weight: bold;
 }
 .bling .text {
-  background-image: -webkit-linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: bling 3s infinite;

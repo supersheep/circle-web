@@ -26,20 +26,19 @@ a
     position: absolute
     background-image: url("/img/tile.png")
     background-size: contain
-    .content-inner
-        height: 100%
-        .panel
-            background-image: url("../img/bg.png")
-            margin: 0 auto
-            width: 1000px
+    .panel
+        background-image: url("../img/bg.png")
+        margin: 0 auto
+        padding: 40px
+        width: 920px
+        height: 400px
+        background-color: #212526
+        .panel-inner
             height: 100%
-            background-color: #212526
             overflow: scroll
-            .panel-inner
-                padding: 40px
-                .bigimg
-                    width: 100%
-                    display: block
+            .bigimg
+                width: 100%
+                display: block
             
 .bottom-nav
     background: url("../img/bg.png")
@@ -75,7 +74,7 @@ a
     overflow: hidden !important
     .scroll-bar.vertical
         width: 3px
-        margin: 40px 20px 40px 10px
+        margin: 0 20px 0 10px
         border-radius: 5px
         box-shadow:  0 0 10px rgba(255,255,255,0.2) 
         padding: 2px
@@ -86,7 +85,7 @@ a
 .bling
     font-weight: bold
     .text
-        background-image: -webkit-linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+        background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
         -webkit-animation: bling 3s infinite
