@@ -1,6 +1,6 @@
 body {
   font-family: "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
-  color: #34a68c;
+  color: #00a08e;
   line-height: 1.5;
   background: url("../img/bg.png");
 }
@@ -19,7 +19,7 @@ li {
   list-style-type: none;
 }
 a {
-  color: #34a68c;
+  color: #00a08e;
   text-decoration: none;
 }
 .content {
@@ -42,7 +42,8 @@ a {
 }
 .content .panel .panel-inner {
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .content .panel .panel-inner .bigimg {
   width: 100%;
@@ -79,7 +80,7 @@ a {
 .bottom-nav .bottom-nav-inner .nav li {
   width: 100px;
   text-align: center;
-  color: #34a68c;
+  color: #00a08e;
   font-size: 12px;
   float: left;
 }

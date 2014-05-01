@@ -1,0 +1,57 @@
+extend layout
+
+block style
+    link(rel="stylesheet",href="/css/detail.css")
+
+block content
+    .panel
+        .panel-inner
+            #slides
+                img(src="/img/detail-slide.jpg")
+                img(src="/img/detail-slide.jpg")
+                img(src="/img/detail-slide.jpg")
+            .product
+                .head
+                    .title 缘点/CIRCLE轻彩宝系列铂金镶黑色欧泊石戒指
+                    .code 产品编号 003985653
+                .detail
+                    | 欧泊的英文名称为opal，源于拉丁文Opalus，意思是“集宝石之美于一身”，
+                    | 或来源于梵文Upala，意思是“贵重的宝石”。中国的“欧泊”一词，是根据英文音译过来的
+                    | 此款欧泊石来自拉丁美洲，有绚烂的五光十色的火彩，戒托部分采用日本传承已久的十字镂空工艺。 
+                .control
+                    label.label 尺寸
+                    .select 
+                    label.label 数量
+                    .select
+                .price.bling
+                    .text CNY 3,499.00
+                .buy
+                    img.btn(alt="点击购买",src="/img/buy.png")
+            .others
+                ul
+                    li.item
+                        img(src="/img/detail-item.jpg")
+                    li.item
+                        img(src="/img/detail-item.jpg")
+                    li.item
+                        img(src="/img/detail-item.jpg")
+
+block script
+    script.
+        $(window).load(function(){
+            var pan_height = $(window).height() - 40 * 5 - 75;
+            $(".panel").css("height",pan_height);
+            $(".panel").customScrollbar();
+
+            $("#slides").slidesjs({
+                width: 330,
+                height: 475,
+                play:{
+                    interval: 1000,
+                }
+            });
+        }).on("resize",function(){
+            var pan_height = $(window).height() - 40 * 5 - 75;
+            $(".panel").css("height",pan_height);
+            $(".panel").customScrollbar();
+        });

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/scrollbar.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.slides.js"></script>
+    <script src="/js/scrollbar.js"></script>
+    <style>
+        #slides {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="panel">
+            <div class="panel-inner">
+                <div id="slides">
+                    <img src="/img/detail-slide.jpg">
+                    <img src="/img/detail-slide.jpg">
+                    <img src="/img/detail-slide.jpg">
+                </div>
+                <div class="product">
+                    <div class="head">
+                        <div class="title">缘点/CIRCLE轻彩宝系列铂金镶黑色欧泊石戒指</div>
+                        <div class="code">产品编号 003985653</div>
+                    </div>
+                    <div class="detail">欧泊的英文名称为opal，源于拉丁文Opalus，意思是“集宝石之美于一身”， 或来源于梵文Upala，意思是“贵重的宝石”。中国的“欧泊”一词，是根据英文音译过来的 此款欧泊石来自拉丁美洲，有绚烂的五光十色的火彩，戒托部分采用日本传承已久的十字镂空工艺。</div>
+                    <div class="control">
+                        <label class="label">尺寸</label>
+                        <div class="select"></div>
+                        <label class="label">数量</label>
+                        <div class="select"></div>
+                    </div>
+                    <div class="price bling">
+                        <div class="text">CNY 3,499.00</div>
+                    </div>
+                    <div class="buy">
+                        <img alt="点击购买" src="/img/buy.png" class="btn">
+                    </div>
+                </div>
+                <div class="others">
+                    <ul>
+                        <li class="item">
+                            <img src="/img/detail-item.jpg">
+                        </li>
+                        <li class="item">
+                            <img src="/img/detail-item.jpg">
+                        </li>
+                        <li class="item">
+                            <img src="/img/detail-item.jpg">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div class="bottom-nav-inner">
+            <div class="logo">
+                <a href="/html/" class="bling">
+                    <div class="text">CIRCLE</div>
+                </a>
+            </div>
+            <ul class="nav">
+                <li><a href="/html/light.html">轻彩宝</a>
+                </li>
+                <li class="bling"><a href="/html/luxery.html" class="text">高级彩宝</a>
+                </li>
+                <li><a href="/html/brand.html">品牌故事</a>
+                </li>
+                <li><a href="/html/order.html">My CIRCLE</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(window).load(function() {
+            var pan_height = $(window).height() - 40 * 5 - 75;
+            $(".panel").css("height", pan_height);
+            $(".panel").customScrollbar();
+
+            $("#slides").slidesjs({
+                width: 330,
+                height: 475,
+                play: {
+                    interval: 1000,
+                }
+            });
+        }).on("resize", function() {
+            var pan_height = $(window).height() - 40 * 5 - 75;
+            $(".panel").css("height", pan_height);
+            $(".panel").customScrollbar();
+        });
+    </script>
+</body>
+
+</html>
