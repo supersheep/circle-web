@@ -39,9 +39,6 @@ block content
 block script
     script.
         $(window).load(function(){
-            var pan_height = $(window).height() - 40 * 5 - 75;
-            $(".panel").css("height",pan_height);
-            $(".panel").customScrollbar();
 
             $("#slides").slidesjs({
                 width: 330,
@@ -50,6 +47,11 @@ block script
                     interval: 1000,
                 }
             });
+            
+            var pan_height = $(window).height() - 40 * 5 - 75;
+            $(".panel").css("height",pan_height);
+            $(".panel").customScrollbar();
+
         }).on("resize",function(){
             var pan_height = $(window).height() - 40 * 5 - 75;
             $(".panel").css("height",pan_height);
