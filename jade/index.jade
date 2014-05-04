@@ -1,23 +1,11 @@
+include mixins/collection-item
 extend layout
-
-block style
 
 block content
     .panel
         .panel-inner
-            img.bigimg(src="/img/detail.jpg")
-            img.bigimg(src="/img/detail.jpg")
-            img.bigimg(src="/img/detail.jpg")
-            img.bigimg(src="/img/detail.jpg")
-
-block script
-    script.
-        $(window).load(function(){
-            var pan_height = $(window).height() - 40 * 5 - 75;
-            $(".panel").css("height",pan_height);
-            $(".panel").customScrollbar();
-        }).on("resize",function(){
-            var pan_height = $(window).height() - 40 * 5 - 75;
-            $(".panel").css("height",pan_height);
-            $(".panel").customScrollbar();
-        });
+            +item("/img/detail.jpg")
+            +item("/img/detail.jpg")
+            +item("/img/detail.jpg")
+            +item("/img/detail.jpg")
+            +item("/img/detail.jpg")

@@ -31,4 +31,10 @@ html(lang="en")
                         a(href="/html/brand.html") 品牌故事
                     li 
                         a(href="/html/order.html") My CIRCLE
+        script.
+            $(window).load(function(){
+                var pan_height = $(window).height() - 40 * 5 - 75;
+                $(".panel").css("height",pan_height);
+                $(".panel").customScrollbar();
+            });
         block script

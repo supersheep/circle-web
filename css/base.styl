@@ -35,11 +35,7 @@ a
         background-color: #212526
         .panel-inner
             height: 100%
-            overflow-y: scroll
-            overflow-x: hidden
-            .bigimg
-                width: 100%
-                display: block
+            overflow: hidden
             
 .bottom-nav
     background: url("../img/bg.png")
@@ -71,17 +67,45 @@ a
                 font-size: 12px
                 float: left
 
+.collection-item
+    display: block
+    position: relative
+    .bigimg
+        width: 100%
+        display: block
+    .overlay
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 50
+        background-color: #000
+        opacity: 0.1
+    &:hover
+        .overlay
+            display: block    
+
 .scrollable
     overflow: hidden !important
     .scroll-bar.vertical
         width: 3px
         margin: 0 20px 0 10px
         border-radius: 5px
-        box-shadow:  0 0 10px rgba(255,255,255,0.2) 
+        box-shadow:  0 0 10px rgba(255,255,255,0.1) 
         padding: 2px
         .thumb
             background-color: #34a68c
             width: 3px!important
+            &:after
+                content:""
+                background-image: url("/img/scroll-dot.png")
+                width: 9px
+                height: 9px
+                left: -3px
+                bottom: -3px
+                position: absolute
 
 .bling
     font-weight: bold

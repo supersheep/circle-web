@@ -20,10 +20,26 @@
     <div class="content">
         <div class="panel">
             <div class="panel-inner">
-                <img src="/img/detail.jpg" class="bigimg">
-                <img src="/img/detail.jpg" class="bigimg">
-                <img src="/img/detail.jpg" class="bigimg">
-                <img src="/img/detail.jpg" class="bigimg">
+                <a href="/html/detail.html" class="collection-item">
+                    <img src="/img/detail.jpg" class="bigimg" />
+                    <div class="overlay"></div>
+                </a>
+                <a href="/html/detail.html" class="collection-item">
+                    <img src="/img/detail.jpg" class="bigimg" />
+                    <div class="overlay"></div>
+                </a>
+                <a href="/html/detail.html" class="collection-item">
+                    <img src="/img/detail.jpg" class="bigimg" />
+                    <div class="overlay"></div>
+                </a>
+                <a href="/html/detail.html" class="collection-item">
+                    <img src="/img/detail.jpg" class="bigimg" />
+                    <div class="overlay"></div>
+                </a>
+                <a href="/html/detail.html" class="collection-item">
+                    <img src="/img/detail.jpg" class="bigimg" />
+                    <div class="overlay"></div>
+                </a>
             </div>
         </div>
     </div>
@@ -48,10 +64,6 @@
     </div>
     <script>
         $(window).load(function() {
-            var pan_height = $(window).height() - 40 * 5 - 75;
-            $(".panel").css("height", pan_height);
-            $(".panel").customScrollbar();
-        }).on("resize", function() {
             var pan_height = $(window).height() - 40 * 5 - 75;
             $(".panel").css("height", pan_height);
             $(".panel").customScrollbar();

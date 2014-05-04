@@ -1,11 +1,11 @@
+include mixins/collection-item
 extend layout
-
-block style
 
 block content
     .panel
         .panel-inner
-            img.bigimg(src="/img/light.jpg")
-            img.bigimg(src="/img/light.jpg")
-            img.bigimg(src="/img/light.jpg")
-            img.bigimg(src="/img/light.jpg")
+            +item("/img/light.jpg")
+            +item("/img/light.jpg")
+            +item("/img/light.jpg")
+            +item("/img/light.jpg")
+            +item("/img/light.jpg")

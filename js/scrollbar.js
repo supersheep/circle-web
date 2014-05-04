@@ -490,7 +490,12 @@
       },
 
       setScrollPosition: function (overviewPosition, thumbPosition) {
-        this.$thumb.css(this.sizing.offsetComponent(), thumbPosition + "px");
+        var height = this._height;
+        if(!height){
+          height = this.$thumb.height();
+          this._height = height;
+        }
+        this.$thumb.css("height", thumbPosition + height + "px");
         this.scrollable.$overview.css(this.sizing.offsetComponent(), -overviewPosition + "px");
       },
 
