@@ -4,10 +4,10 @@ block style
     link(rel="stylesheet",href="/css/login.css") 
 
 block content
-    .panel
+    .panel.login
         .panel-inner
             img.logo(src="/img/logo.png")
-            form
+            form.form
                 .row
                     input#email(type='email',placeholder="用户名 / 邮箱")
                 .row
@@ -16,7 +16,7 @@ block content
                     input.submit(type="submit",value="")
             .others
                 .new.bling
-                    a.text(href="#") 新账户注册
+                    a.text(href="./register.html") 新账户注册
                 .forget-password
                     a.text(href="#") 忘记密码？
 

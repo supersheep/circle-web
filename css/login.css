@@ -1,26 +1,65 @@
-.content .content-inner {
+.content {
   position: relative;
 }
-.content .content-inner .panel {
+.content .panel {
   background: #98d7c9;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.2);
   width: 330px;
   border-radius: 10px;
 }
-.content .content-inner .panel .panel-inner {
-  position: relative;
-  padding: 40px;
+.content .panel.register {
+  width: 770px;
 }
-.content .content-inner .panel .panel-inner .logo {
+.content .panel.register .panel-inner {
+  padding: 0;
+}
+.content .panel.register .panel-inner .form {
+  zoom: 1;
+}
+.content .panel.register .panel-inner .form:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.content .panel.register .panel-inner .left {
+  float: left;
+  width: 460px;
+  margin-right: 35px;
+}
+.content .panel.register .panel-inner .right {
+  float: left;
+}
+.content .panel.register .panel-inner .row input {
+  float: left;
+  width: 245px;
+  margin-right: 5px;
+}
+.content .panel.register .panel-inner .hint {
+  position: relative;
+  top: 8px;
+  float: left;
+}
+.content .panel .panel-inner {
+  overflow: scroll;
+  position: relative;
+  padding: 0 40px;
+}
+.content .panel .panel-inner .logo {
   margin: 0 auto;
   display: block;
   margin-bottom: 30px;
 }
-.content .content-inner .panel .panel-inner .row {
+.content .panel .panel-inner .row {
+  zoom: 1;
   position: relative;
   margin-bottom: 20px;
 }
-.content .content-inner .panel .panel-inner .row input {
+.content .panel .panel-inner .row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.content .panel .panel-inner .row input {
   padding: 5px 10px;
   font-size: 17px;
   box-sizing: border-box;
@@ -30,7 +69,10 @@
   color: #31ae92;
   width: 100%;
 }
-.content .content-inner .panel .panel-inner .row .submit {
+.content .panel .panel-inner .row .hint {
+  color: #fff;
+}
+.content .panel .panel-inner .row .submit {
   cursor: pointer;
   background: url("/img/login.png");
   width: 71px;
@@ -40,7 +82,7 @@
   display: block;
   text-index: -999px;
 }
-.content .content-inner .panel .panel-inner .row.active input {
+.content .panel .panel-inner .row.active input {
   background-color: #31ae92;
   border-color: #fff;
   color: #fff;

@@ -14,10 +14,46 @@
             display: none;
         }
     </style>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
-    <div class="content"></div>
+    <div class="content">
+        <div class="panel register">
+            <div class="panel-inner">
+                <img src="/img/logo.png" class="logo">
+                <form class="form">
+                    <div class="left">
+                        <div class="row">
+                            <input id="username" type="text" name="username" placeholder="用户名">
+                            <div class="hint">长度不能少于3个字符</div>
+                        </div>
+                        <div class="row">
+                            <input id="email" type="text" name="email" placeholder="邮箱">
+                        </div>
+                        <div class="row">
+                            <input id="password" type="password" name="password" placeholder="密码">
+                        </div>
+                        <div class="row password-strength"><span>密码强度</span>
+                            <div class="strong-hint weak"></div>
+                        </div>
+                        <div class="row">
+                            <input id="password" type="password" name="password" placeholder="确认密码">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="row">
+                            <input id="qq" type="text" name="qq" placeholder="QQ">
+                        </div>
+                        <div class="row">
+                            <input id="phone" type="text" name="phone" placeholder="手机号码">
+                        </div>
+                    </div>
+                </form>
+                <input type="submit" value="" class="submit">
+            </div>
+        </div>
+    </div>
     <div class="bottom-nav">
         <div class="bottom-nav-inner">
             <div class="logo">
@@ -37,11 +73,36 @@
             </ul>
         </div>
     </div>
+    <script src="/js/placeholder.js"></script>
     <script>
-        $(window).load(function() {
-            var pan_height = $(window).height() - 40 * 5 - 75;
-            $(".panel").css("height", pan_height);
-            $(".panel").customScrollbar();
+        $(".row").each(function(i, el) {
+            $(el).find("input").on("click", function() {
+                $(".row").removeClass("active");
+                $(el).addClass("active");
+            });
+        });
+        $(".row input").on("blur", function() {
+            $(".row").removeClass("active");
+        });
+
+        $(".row input").placeholder();
+
+        $("form").on("submit", function() {
+            var email = $("#email").val().trim();
+            var password = $("#password").val().trim();
+            if (!email) {
+                alert("请输入邮箱");
+                return false;
+            }
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                alert("邮箱格式不符合规范");
+                return false;
+            }
+            if (!password) {
+                alert("请输入密码");
+                return false;
+            }
+            return true;
         });
     </script>
 </body>

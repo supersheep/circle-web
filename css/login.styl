@@ -1,21 +1,43 @@
 @import "mixins"
 @import "variables"
 cyan = #31ae92
-.content .content-inner 
+.content
     position: relative
     .panel
         background: #98d7c9
-        background: rgba(255,255,255,0.5)
+        background: rgba(255,255,255,0.2)
         width: 330px
         border-radius: 10px
+        &.register
+            width: 770px
+            .panel-inner 
+                padding: 0
+                .form
+                    clearfix()
+                .left
+                    float: left
+                    width: 460px
+                    margin-right: 35px
+                .right
+                    float: left
+                .row input
+                    float: left
+                    width: 245px
+                    margin-right: 5px
+                .hint
+                    position: relative
+                    top: 8px
+                    float: left
         .panel-inner
+            overflow: scroll
             position: relative
-            padding: 40px
+            padding: 0 40px
             .logo
                 margin: 0 auto
                 display: block
                 margin-bottom: 30px
             .row
+                clearfix()
                 position: relative
                 margin-bottom: 20px 
                 input
@@ -27,6 +49,8 @@ cyan = #31ae92
                     border: 1px solid #fff
                     color: cyan
                     width: 100%
+                .hint
+                    color: #fff
                 .submit
                     cursor: pointer
                     background: url("/img/login.png")
@@ -41,6 +65,7 @@ cyan = #31ae92
                     background-color: cyan
                     border-color: #fff
                     color: #fff
+        
 
 .others
     clearfix()

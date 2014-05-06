@@ -96,7 +96,7 @@ a {
   height: 100%;
   z-index: 50;
   background-color: #000;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 .collection-item:hover .overlay {
   display: block;

@@ -19,10 +19,10 @@
 
 <body>
     <div class="content">
-        <div class="panel">
+        <div class="panel login">
             <div class="panel-inner">
                 <img src="/img/logo.png" class="logo">
-                <form>
+                <form class="form">
                     <div class="row">
                         <input id="email" type="email" placeholder="用户名 / 邮箱">
                     </div>
@@ -34,7 +34,7 @@
                     </div>
                 </form>
                 <div class="others">
-                    <div class="new bling"><a href="#" class="text">新账户注册</a>
+                    <div class="new bling"><a href="./register.html" class="text">新账户注册</a>
                     </div>
                     <div class="forget-password"><a href="#" class="text">忘记密码？</a>
                     </div>
@@ -61,13 +61,6 @@
             </ul>
         </div>
     </div>
-    <script>
-        $(window).load(function() {
-            var pan_height = $(window).height() - 40 * 5 - 75;
-            $(".panel").css("height", pan_height);
-            $(".panel").customScrollbar();
-        });
-    </script>
     <script src="/js/placeholder.js"></script>
     <script>
         $(".row").on("click", function() {
