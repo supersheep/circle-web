@@ -1,8 +1,9 @@
 @import "mixins"
 @import "variables"
-.panel-inner
+
+.content .panel .panel-inner
     clearfix()
-    overflow-x: hidden
+    overflow: hidden
 
 #slides
     float: left
@@ -23,7 +24,7 @@
         margin: 0 5px
         display: inline-block
         background-color: cyan
-        border: 2px solid #fff
+        border: 2px solid cyan
         a
             display: block
             text-indent: -999px
@@ -66,6 +67,8 @@
 
 .others
     float: left
+    overflow: hidden
+    padding-right: 40px
     .item
         width: 140px
         height: 140px

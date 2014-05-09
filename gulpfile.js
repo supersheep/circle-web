@@ -31,8 +31,9 @@ gulp.task('stylus', function(){
         use: [nib()],
         import : ["nib","variables","mixins"]
     };
-    gulp.src(["./css/*.styl"])
+    gulp.src(["css/**/*.styl"])
         .pipe(stylus())
+        .on("error",console.log)
         .pipe(gulp.dest('./css/'));
 });
 

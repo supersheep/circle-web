@@ -47,13 +47,17 @@ block script
                     interval: 1000,
                 }
             });
-            
+                
+
             var pan_height = $(window).height() - 40 * 5 - 75;
+
+
+            $(".others")
+                .css("height", pan_height)
+                .css("width", $(".others").width())
+                .customScrollbar();
+                
             $(".panel").css("height",pan_height);
             $(".panel").customScrollbar();
 
-        }).on("resize",function(){
-            var pan_height = $(window).height() - 40 * 5 - 75;
-            $(".panel").css("height",pan_height);
-            $(".panel").customScrollbar();
         });
