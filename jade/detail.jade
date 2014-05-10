@@ -20,9 +20,12 @@ block content
                     | 此款欧泊石来自拉丁美洲，有绚烂的五光十色的火彩，戒托部分采用日本传承已久的十字镂空工艺。 
                 .control
                     label.label 尺寸
-                    .select 
+                    select.input.select
+                        option 大
+                        option 中
+                        option 小
                     label.label 数量
-                    .select
+                    input.input(value="1",type="number")
                 .price.bling
                     .text CNY 3,499.00
                 .buy
@@ -44,7 +47,8 @@ block script
                 width: 330,
                 height: 475,
                 play:{
-                    interval: 1000,
+                    auto: true,
+                    interval: 5000,
                 }
             });
                 
@@ -56,7 +60,7 @@ block script
                 .css("height", pan_height)
                 .css("width", $(".others").width())
                 .customScrollbar();
-                
+
             $(".panel").css("height",pan_height);
             $(".panel").customScrollbar();
 

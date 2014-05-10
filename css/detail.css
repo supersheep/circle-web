@@ -23,17 +23,20 @@
   margin-top: 20px;
 }
 .slidesjs-pagination .slidesjs-pagination-item {
+  margin: 0 5px;
+  display: inline-block;
+}
+.slidesjs-pagination .slidesjs-pagination-item a {
+  background-color: #00a08e;
   width: 4px;
   height: 4px;
   border-radius: 4px;
-  margin: 0 5px;
-  display: inline-block;
-  background-color: #00a08e;
   border: 2px solid #00a08e;
-}
-.slidesjs-pagination .slidesjs-pagination-item a {
   display: block;
   text-indent: -999px;
+}
+.slidesjs-pagination .slidesjs-pagination-item .active {
+  border: 2px solid #fff;
 }
 .product {
   float: left;
@@ -63,13 +66,23 @@
 .product .control .label {
   float: left;
 }
-.product .control .select {
+.product .control .input {
+  border-radius: 0;
+  box-sizing: border-box;
+  padding: 0 5px;
+  height: 20px;
   border: 1px solid #00a08e;
+  color: #00a08e;
   background-color: #000;
   float: left;
-  height: 15px;
   margin: 0 30px 0 10px;
   width: 70px;
+}
+.product .control .select {
+  -webkit-appearance: none;
+  background-image: url("/img/down-arrow.png");
+  background-position: 56px 6px;
+  background-repeat: no-repeat;
 }
 .product .price {
   font-size: 14px;

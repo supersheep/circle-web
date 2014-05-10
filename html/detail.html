@@ -9,11 +9,6 @@
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.slides.js"></script>
     <script src="/js/scrollbar.js"></script>
-    <style>
-        #slides {
-            display: none;
-        }
-    </style>
     <link rel="stylesheet" href="/css/detail.css">
 </head>
 
@@ -34,9 +29,13 @@
                     <div class="detail">欧泊的英文名称为opal，源于拉丁文Opalus，意思是“集宝石之美于一身”， 或来源于梵文Upala，意思是“贵重的宝石”。中国的“欧泊”一词，是根据英文音译过来的 此款欧泊石来自拉丁美洲，有绚烂的五光十色的火彩，戒托部分采用日本传承已久的十字镂空工艺。</div>
                     <div class="control">
                         <label class="label">尺寸</label>
-                        <div class="select"></div>
+                        <select class="input select">
+                            <option>大</option>
+                            <option>中</option>
+                            <option>小</option>
+                        </select>
                         <label class="label">数量</label>
-                        <div class="select"></div>
+                        <input value="1" type="number" class="input">
                     </div>
                     <div class="price bling">
                         <div class="text">CNY 3,499.00</div>
@@ -87,7 +86,8 @@
                 width: 330,
                 height: 475,
                 play: {
-                    interval: 1000,
+                    auto: true,
+                    interval: 5000,
                 }
             });
 

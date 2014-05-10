@@ -18,16 +18,18 @@
     text-align: center
     margin-top: 20px
     .slidesjs-pagination-item
-        width: 4px
-        height: 4px
-        border-radius: 4px
         margin: 0 5px
         display: inline-block
-        background-color: cyan
-        border: 2px solid cyan
         a
+            background-color: cyan
+            width: 4px
+            height: 4px
+            border-radius: 4px
+            border: 2px solid cyan
             display: block
             text-indent: -999px
+        .active
+            border: 2px solid #fff
 
 .product
     float: left
@@ -47,13 +49,22 @@
         margin-bottom: 45px
         .label
             float: left
-        .select
+        .input
+            border-radius: 0
+            box-sizing: border-box
+            padding: 0 5px
+            height: 20px
             border: 1px solid cyan
+            color: cyan
             background-color: #000
             float: left
-            height: 15px
             margin: 0 30px 0 10px
             width: 70px
+        .select
+            -webkit-appearance: none
+            background-image: url("/img/down-arrow.png")
+            background-position: 56px 6px
+            background-repeat: no-repeat
     .price
         font-size: 14px
         margin: 40px 0
