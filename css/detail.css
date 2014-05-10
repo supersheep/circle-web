@@ -14,9 +14,27 @@
 }
 #slides img {
   width: 330px;
+  display: block;
 }
-.slidesjs-navigation {
+#slides .slidesjs-navigation {
   display: none;
+}
+#slides .item {
+  display: block;
+  overflow: relative;
+}
+#slides .item .overlay {
+  display: none;
+}
+#slides .item:hover .overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0,0,0,0.3);
 }
 .slidesjs-pagination {
   text-align: center;

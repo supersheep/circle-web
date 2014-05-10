@@ -11,9 +11,26 @@
     position: relative
     img
         width: 330px
+        display: block
+    .slidesjs-navigation
+        display: none
+    .item
+        display: block
+        overflow: relative
+        .overlay
+            display: none
+    .item:hover
+        .overlay
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 5
+            background-color: rgba(0,0,0,0.3)
 
-.slidesjs-navigation
-    display: none
+
 .slidesjs-pagination
     text-align: center
     margin-top: 20px
