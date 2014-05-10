@@ -1,14 +1,80 @@
 include mixins/collection-item
 extend layout
 
+block style
+    link(rel="stylesheet",href="/css/collection.css")
+
 block content
     .panel
         .panel-inner
-            +item("/img/light.jpg")
-            +item("/img/light.jpg")
-            +item("/img/light.jpg")
-            +item("/img/light.jpg")
-            +item("/img/light.jpg")
+            #slides
+                a.item(href="javascript:;")
+                    img(src="/img/light-list-slide.jpg")
+                    .overlay
+                a.item(href="javascript:;")
+                    img(src="/img/light-list-item-1.jpg")
+                    .overlay
+                a.item(href="javascript:;")
+                    img(src="/img/light-list-item-2.jpg")
+                    .overlay
+            #items
+                ul
+                    li
+                        a.item(href="javascript:;")
+                            img(src="/img/light-list-item-1.jpg")
+                            .overlay
+                    li
+                        a.item(href="javascript:;")
+                            img(src="/img/light-list-item-2.jpg")
+                            .overlay
+                    li
+                        a.item(href="javascript:;")
+                            img(src="/img/light-list-item-3.jpg")
+                            .overlay
+                    li
+                        a.item(href="javascript:;")
+                            img(src="/img/light-list-item-4.jpg")
+                            .overlay
+                    li
+                        a.item(href="javascript:;")
+                            img(src="/img/light-list-item-4.jpg")
+                            .overlay
+                    li
+                        a.item(href="javascript:;")
+                            img(src="/img/light-list-item-4.jpg")
+                            .overlay
             
 block script
-    include init-scroll
+    script.
+        $(window).load(function(){
+
+            $("#slides").slidesjs({
+                width: 440,
+                height: 538,
+                effect: {
+                    fade: {
+                        speed: 1000
+                    }
+                },
+                navigation:{
+                    active: false
+                },
+                pagination: {
+                    effect: "fade"
+                },
+                play:{
+                    effect: "fade",
+                    auto: true,
+                    interval: 1000,
+                }
+            });
+                
+
+            var pan_height = $(window).height() - 40 * 5 - 75;
+
+            $(".panel").css("height",pan_height);
+
+
+            $("#items").customScrollbar();
+
+        });

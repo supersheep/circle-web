@@ -29,10 +29,10 @@ gulp.task('image',function(){
 gulp.task('stylus', function(){
     var stylusOptions = {
         use: [nib()],
-        import : ["nib","variables","mixins"]
+        import : ["nib"]
     };
     gulp.src(["css/**/*.styl"])
-        .pipe(stylus())
+        .pipe(stylus(stylusOptions))
         .on("error",console.log)
         .pipe(gulp.dest('./css/'));
 });

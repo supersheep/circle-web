@@ -30,6 +30,8 @@ a {
   overflow: hidden;
   position: absolute;
   background-image: url("/img/tile.png");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
   background-size: contain;
 }
 .content .panel {
@@ -97,6 +99,8 @@ a {
   z-index: 50;
   background-color: #000;
   opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
 }
 .collection-item:hover .overlay {
   display: block;
@@ -107,7 +111,9 @@ a {
 .scrollable .scroll-bar.vertical {
   width: 3px;
   margin: 0 20px 0 10px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.1);
   box-shadow: 0 0 10px rgba(255,255,255,0.1);
   padding: 2px;
 }
@@ -128,6 +134,10 @@ a {
   font-weight: bold;
 }
 .bling .text {
+  background-image: -webkit-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -moz-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -o-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
+  background-image: -ms-linear-gradient(left, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

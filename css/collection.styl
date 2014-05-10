@@ -1,0 +1,71 @@
+@import "variables"
+
+.panel-inner
+    clearfix()
+
+
+.item
+    display: block
+    position: relative
+    .overlay
+        display: none
+
+.item:hover
+    .overlay
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 5
+        background-color: rgba(0,0,0,0.3)
+
+#slides
+    float: left
+    width: 440px
+    position: relative
+    margin-right: 2px
+    img
+        width: 440px
+        height: 538px
+        display: block
+
+.slidesjs-pagination
+    text-align: center
+    margin-top: 20px
+    .slidesjs-pagination-item
+        margin: 0 5px
+        display: inline-block
+        a
+            background-color: cyan
+            width: 4px
+            height: 4px
+            border-radius: 4px
+            border: 2px solid cyan
+            display: block
+            text-indent: -999px
+        .active
+            border: 2px solid #fff
+
+.scrollable .scroll-bar.vertical
+    padding-bottom: 10px
+
+#items
+    float: left
+    width: 430px
+    height: 538px
+    overflow: hidden
+    padding-right: 40px
+    ul
+        clearfix()
+    .overview
+        width: 100%
+    .item
+        float: left
+        margin-right: 2px
+        margin-bottom: 2px
+        img
+            display: block
+            width: 200px
+            height: 268px
