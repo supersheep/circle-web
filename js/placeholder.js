@@ -11,6 +11,7 @@
         label.css({
             "position":"absolute",
             "cursor": "text",
+            "font-size": parseInt(input.css("font-size"),10),
             "top": parseInt(input.css("padding-top"),10) + 3 , 
             "left": parseInt(input.css("padding-left"),10) + 3,
         });

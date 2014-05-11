@@ -1,12 +1,13 @@
-.panel-inner {
+.content .panel .panel-inner {
   zoom: 1;
+  overflow: hidden;
 }
-.panel-inner:before,
-.panel-inner:after {
+.content .panel .panel-inner:before,
+.content .panel .panel-inner:after {
   content: "";
   display: table;
 }
-.panel-inner:after {
+.content .panel .panel-inner:after {
   clear: both;
 }
 .item {

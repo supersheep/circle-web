@@ -15,24 +15,15 @@ block content
                 .row
                     input.submit(type="submit",value="")
             .others
-                .new.bling
+                .left-link.bling
                     a.text(href="./register.html") 新账户注册
-                .forget-password
+                .right-link
                     a.text(href="#") 忘记密码？
 
 block script
-    script(src="/js/placeholder.js")
+    include init-adjust-panel
+    include init-placeholder
     script.
-        $(".row").on("click",function(){
-            $(".row").removeClass("active");
-            $(this).addClass("active");
-        });
-        $(".row input").on("blur",function(){
-            $(".row").removeClass("active");
-        });
-
-        $(".row input").placeholder();
-
         $("form").on("submit",function(){
             var email = $("#email").val().trim();
             var password = $("#password").val().trim();

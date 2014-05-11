@@ -1,0 +1,13 @@
+script(src="/js/placeholder.js")
+script.
+    $(".row").each(function(i,el){
+        $(el).find("input").on("click",function(){
+            $(".row").removeClass("active");
+            $(el).addClass("active");
+        });
+    });
+    $(".row input").on("blur",function(){
+        $(".row").removeClass("active");
+    });
+
+    $(".row input[type=text],.row input[type=password]").placeholder();

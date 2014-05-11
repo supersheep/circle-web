@@ -29,9 +29,9 @@
                     </div>
                 </form>
                 <div class="others">
-                    <div class="new bling"><a href="./register.html" class="text">新账户注册</a>
+                    <div class="left-link bling"><a href="./register.html" class="text">新账户注册</a>
                     </div>
-                    <div class="forget-password"><a href="#" class="text">忘记密码？</a>
+                    <div class="right-link"><a href="#" class="text">忘记密码？</a>
                     </div>
                 </div>
             </div>
@@ -56,18 +56,33 @@
             </ul>
         </div>
     </div>
+    <script>
+        (function() {
+            function adjust() {
+                var pan_height = $(window).height() - 40 * 5 - 75;
+                $(".panel").css("height", pan_height);
+            }
+
+            $(window)
+                .on("load", adjust)
+                .on("resize", adjust);
+        })();
+    </script>
     <script src="/js/placeholder.js"></script>
     <script>
-        $(".row").on("click", function() {
-            $(".row").removeClass("active");
-            $(this).addClass("active");
+        $(".row").each(function(i, el) {
+            $(el).find("input").on("click", function() {
+                $(".row").removeClass("active");
+                $(el).addClass("active");
+            });
         });
         $(".row input").on("blur", function() {
             $(".row").removeClass("active");
         });
 
-        $(".row input").placeholder();
-
+        $(".row input[type=text],.row input[type=password]").placeholder();
+    </script>
+    <script>
         $("form").on("submit", function() {
             var email = $("#email").val().trim();
             var password = $("#password").val().trim();

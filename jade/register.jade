@@ -8,43 +8,42 @@ block content
         .panel-inner
             img.logo(src="/img/logo.png")
             form.form
-                .left
-                    .row
-                        input#username(type='text',name="username",placeholder="用户名")
-                        .hint 长度不能少于3个字符
-                    .row
-                        input#email(type='text',name="email",placeholder="邮箱")
-                    .row
-                        input#password(type="password",name="password",placeholder="密码")
-                    .row.password-strength
-                        span 密码强度
-                        .strong-hint.weak
-                    .row
-                        input#password(type="password",name="password",placeholder="确认密码")
-                .right
-                    .row
-                        input#qq(type="text",name="qq",placeholder="QQ")
-                    .row
-                        input#phone(type="text",name="phone",placeholder="手机号码")
-            //- .read-spec
-            //-     我已看过并接受用户协议
-            input.submit(type="submit",value="")
+                .fields
+                    .left
+                        .row
+                            input#username(type='text',name="username",placeholder="用户名")
+                            .hint 长度不能少于3个字符
+                        .row
+                            input#email(type='text',name="email",placeholder="邮箱")
+                            .hint 请至少留下1个有效邮箱
+                        .row
+                            input#password(type="password",name="password",placeholder="密码")
+                            .hint 长度不能少于6个字符
+                        .row.password-strength
+                            span 密码强度
+                            .strong-hint.weak
+                        .row
+                            input#password(type="password",name="password",placeholder="确认密码")
+                            .hint 请再次确认密码
+                    .right
+                        .row
+                            input#qq(type="text",name="qq",placeholder="QQ")
+                        .row
+                            input#phone(type="text",name="phone",placeholder="手机号码")
+                        .row.others
+                            .left-link
+                                a.text(href="#") 忘记密码
+                            .right-link
+                                a.text(href="#") 已有账号登录
+                //- .read-spec
+                //-     我已看过并接受用户协议
+                .row
+                    input.submit(type="submit",value="")
 
 block script
-    script(src="/js/placeholder.js")
+    include init-adjust-panel
+    include init-placeholder
     script.
-        $(".row").each(function(i,el){
-            $(el).find("input").on("click",function(){
-                $(".row").removeClass("active");
-                $(el).addClass("active");
-            });
-        });
-        $(".row input").on("blur",function(){
-            $(".row").removeClass("active");
-        });
-
-        $(".row input").placeholder();
-
         $("form").on("submit",function(){
             var email = $("#email").val().trim();
             var password = $("#password").val().trim();
