@@ -33,10 +33,14 @@
                                 <div class="hint">长度不能少于6个字符</div>
                             </div>
                             <div class="row password-strength"><span>密码强度</span>
-                                <div class="strong-hint weak"></div>
+                                <div class="strong-hint">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
                             </div>
                             <div class="row">
-                                <input id="password" type="password" name="password" placeholder="确认密码">
+                                <input id="confirm" type="password" placeholder="确认密码">
                                 <div class="hint">请再次确认密码</div>
                             </div>
                         </div>
@@ -45,7 +49,7 @@
                                 <input id="qq" type="text" name="qq" placeholder="QQ">
                             </div>
                             <div class="row">
-                                <input id="phone" type="text" name="phone" placeholder="手机号码">
+                                <input id="mobile" type="text" name="mobile" placeholder="手机号码">
                             </div>
                             <div class="row others">
                                 <div class="left-link"><a href="#" class="text">忘记密码</a>
@@ -108,22 +112,66 @@
         $(".row input[type=text],.row input[type=password]").placeholder();
     </script>
     <script>
+        $("#password").on("keyup", function() {
+            var password = $(this).val().trim();
+            var strength = 0;
+
+            [
+                password.match(/\d/),
+                password.match(/\w/),
+                password.match(/[^\w\d]+/),
+                password.length > 3
+            ].forEach(function(pass) {
+                if (pass) {
+                    strength += 1;
+                }
+            });
+
+            if (strength < 0) {
+                strength = 1;
+            }
+            if (strength > 3) {
+                strength = 3;
+            }
+
+            if (password.length == 0) {
+                strength = 0;
+            }
+
+            $(".strong-hint .dot").removeClass("active").each(function(i, el) {
+                if (i + 1 <= strength) {
+                    $(el).addClass("active");
+                }
+            });
+        });
+
         $("form").on("submit", function() {
+            var username = $("#username").val().trim();
             var email = $("#email").val().trim();
             var password = $("#password").val().trim();
-            if (!email) {
-                alert("请输入邮箱");
-                return false;
+            var confirm = $("#confirm").val().trim();
+            var qq = $("#qq").val().trim();
+            var mobile = $("#mobile").val().trim();
+
+            var rules = [
+                [!username, "请输入用户名"],
+                [username.length < 3, "用户名长度不能少于3个字符"],
+                [!email, "请输入邮箱"],
+                [!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email), "邮箱格式不符合规范"],
+                [!password, "请输入密码"],
+                [password != confirm, "两次密码输入不匹配"],
+                [!qq, "请输入QQ号"],
+                [!mobile, "请输入手机号"]
+            ];
+
+            for (var i = 0; i < rules.length; i++) {
+                var rule = rules[i];
+                if (rule[0]) {
+                    alert(rule[1]);
+                    return false;
+                }
             }
-            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
-                alert("邮箱格式不符合规范");
-                return false;
-            }
-            if (!password) {
-                alert("请输入密码");
-                return false;
-            }
-            return true;
+            return false;
         });
     </script>
 </body>

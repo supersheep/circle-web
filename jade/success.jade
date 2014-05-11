@@ -1,0 +1,20 @@
+extend layout
+
+block style
+    link(rel="stylesheet",href="/css/success.css")
+
+block content
+    .panel
+        .panel-inner
+            .logo
+                img(src="/img/logo-dark.png")
+            .message
+                p.succ 购买成功
+                p 您的订单编号为 253652987577412
+                p 我们将在48小时内为您安排发货
+                p 请耐心等待
+
+
+
+block script
+    include init-adjust-panel

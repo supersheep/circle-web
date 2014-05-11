@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/scrollbar.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.slides.js"></script>
+    <script src="/js/scrollbar.js"></script>
+    <link rel="stylesheet" href="/css/success.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="panel">
+            <div class="panel-inner">
+                <div class="logo">
+                    <img src="/img/logo-dark.png">
+                </div>
+                <div class="message">
+                    <p class="succ">购买成功</p>
+                    <p>您的订单编号为 253652987577412</p>
+                    <p>我们将在48小时内为您安排发货</p>
+                    <p>请耐心等待</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <div class="bottom-nav-inner">
+            <div class="logo">
+                <a href="/html/" class="bling">
+                    <div class="text">CIRCLE</div>
+                </a>
+            </div>
+            <ul class="nav">
+                <li><a href="/html/light.html">轻彩宝</a>
+                </li>
+                <li class="bling"><a href="/html/luxery.html" class="text">高级彩宝</a>
+                </li>
+                <li><a href="/html/brand.html">品牌故事</a>
+                </li>
+                <li><a href="/html/order.html">My CIRCLE</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        (function() {
+            function adjust() {
+                var pan_height = $(window).height() - 40 * 5 - 75;
+                $(".panel").css("height", pan_height);
+            }
+
+            $(window)
+                .on("load", adjust)
+                .on("resize", adjust);
+        })();
+    </script>
+</body>
+
+</html>
