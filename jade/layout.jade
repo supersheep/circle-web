@@ -18,14 +18,14 @@ html(lang="en")
                 a.brand(href="/")
                     img(src="/img/brand.png")
                 ul.nav
-                    +item("/light","轻彩宝")
-                    +item("/heavy","高级彩宝")
-                    +item("/brand","品牌故事")
+                    +item("/html/light.html","轻彩宝")
+                    +item("/html/heavy.html","高级彩宝")
+                    +item("/html/brand.html","品牌故事")
                     +item("/","My Circle")
 
 
         div.content
-            .panel
+            .panel.container
                 block content
         .footer
             .container
@@ -33,9 +33,9 @@ html(lang="en")
                     li
                         span @2014 circle
                     li
-                        a(href="/html/light.html") 联系我们
+                        a(href="/html/contact.html") 联系我们
                     li
-                        a(href="/html/luxery.html") 隐私政策
+                        a(href="/html/privacy.html") 隐私政策
                     li
                         a(href="/html/brand.html") 使用条款
                 .social
