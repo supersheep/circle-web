@@ -5,175 +5,101 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/scrollbar.css">
     <script src="/js/jquery.js"></script>
-    <script src="/js/jquery.slides.js"></script>
-    <script src="/js/scrollbar.js"></script>
     <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
-    <div class="content">
-        <div class="panel register">
-            <div class="panel-inner">
-                <img src="/img/logo.png" class="logo">
-                <form class="form">
-                    <div class="fields">
-                        <div class="left">
-                            <div class="row">
-                                <input id="username" type="text" name="username" placeholder="用户名">
-                                <div class="hint">长度不能少于3个字符</div>
-                            </div>
-                            <div class="row">
-                                <input id="email" type="text" name="email" placeholder="邮箱">
-                                <div class="hint">请至少留下1个有效邮箱</div>
-                            </div>
-                            <div class="row">
-                                <input id="password" type="password" name="password" placeholder="密码">
-                                <div class="hint">长度不能少于6个字符</div>
-                            </div>
-                            <div class="row password-strength"><span>密码强度</span>
-                                <div class="strong-hint">
-                                    <div class="dot"></div>
-                                    <div class="dot"></div>
-                                    <div class="dot"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <input id="confirm" type="password" placeholder="确认密码">
-                                <div class="hint">请再次确认密码</div>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="row">
-                                <input id="qq" type="text" name="qq" placeholder="QQ">
-                            </div>
-                            <div class="row">
-                                <input id="mobile" type="text" name="mobile" placeholder="手机号码">
-                            </div>
-                            <div class="row others">
-                                <div class="left-link"><a href="#" class="text">忘记密码</a>
-                                </div>
-                                <div class="right-link"><a href="#" class="text">已有账号登录</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input type="submit" value="" class="submit">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="bottom-nav">
-        <div class="bottom-nav-inner">
-            <div class="logo">
-                <a href="/html/" class="bling">
-                    <div class="text">CIRCLE</div>
-                </a>
-            </div>
+    <div class="header">
+        <div class="container">
+            <a href="/" class="brand">
+                <img src="/img/brand.png">
+            </a>
             <ul class="nav">
-                <li><a href="/html/light.html">轻彩宝</a>
+                <li><a href="/light">轻彩宝</a>
                 </li>
-                <li class="bling"><a href="/html/luxery.html" class="text">高级彩宝</a>
+                <li><a href="/heavy">高级彩宝</a>
                 </li>
-                <li><a href="/html/brand.html">品牌故事</a>
+                <li><a href="/brand">品牌故事</a>
                 </li>
-                <li><a href="/html/order.html">My CIRCLE</a>
+                <li><a href="/">My Circle</a>
                 </li>
             </ul>
         </div>
     </div>
-    <script>
-        (function() {
-            function adjust() {
-                var pan_height = $(window).height() - 40 * 5 - 75;
-                $(".panel").css("height", pan_height);
-            }
-
-            $(window)
-                .on("load", adjust)
-                .on("resize", adjust);
-        })();
-    </script>
-    <script src="/js/placeholder.js"></script>
-    <script>
-        $(".row").each(function(i, el) {
-            $(el).find("input").on("click", function() {
-                $(".row").removeClass("active");
-                $(el).addClass("active");
-            });
-        });
-        $(".row input").on("blur", function() {
-            $(".row").removeClass("active");
-        });
-
-        $(".row input[type=text],.row input[type=password]").placeholder();
-    </script>
-    <script>
-        $("#password").on("keyup", function() {
-            var password = $(this).val().trim();
-            var strength = 0;
-
-            [
-                password.match(/\d/),
-                password.match(/\w/),
-                password.match(/[^\w\d]+/),
-                password.length > 3
-            ].forEach(function(pass) {
-                if (pass) {
-                    strength += 1;
-                }
-            });
-
-            if (strength < 0) {
-                strength = 1;
-            }
-            if (strength > 3) {
-                strength = 3;
-            }
-
-            if (password.length == 0) {
-                strength = 0;
-            }
-
-            $(".strong-hint .dot").removeClass("active").each(function(i, el) {
-                if (i + 1 <= strength) {
-                    $(el).addClass("active");
-                }
-            });
-        });
-
-        $("form").on("submit", function() {
-            var username = $("#username").val().trim();
-            var email = $("#email").val().trim();
-            var password = $("#password").val().trim();
-            var confirm = $("#confirm").val().trim();
-            var qq = $("#qq").val().trim();
-            var mobile = $("#mobile").val().trim();
-
-            var rules = [
-                [!username, "请输入用户名"],
-                [username.length < 3, "用户名长度不能少于3个字符"],
-                [!email, "请输入邮箱"],
-                [!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email), "邮箱格式不符合规范"],
-                [!password, "请输入密码"],
-                [password != confirm, "两次密码输入不匹配"],
-                [!qq, "请输入QQ号"],
-                [!mobile, "请输入手机号"]
-            ];
-
-            for (var i = 0; i < rules.length; i++) {
-                var rule = rules[i];
-                if (rule[0]) {
-                    alert(rule[1]);
-                    return false;
-                }
-            }
-            return false;
-        });
-    </script>
+    <div class="content">
+        <div class="panel">
+            <div class="panel register">
+                <div class="panel-inner">
+                    <img src="/img/logo.png" class="logo">
+                    <form class="form">
+                        <div class="fields">
+                            <div class="left">
+                                <div class="row">
+                                    <input id="username" type="text" name="username" placeholder="用户名">
+                                    <div class="hint">长度不能少于3个字符</div>
+                                </div>
+                                <div class="row">
+                                    <input id="email" type="text" name="email" placeholder="邮箱">
+                                    <div class="hint">请至少留下1个有效邮箱</div>
+                                </div>
+                                <div class="row">
+                                    <input id="password" type="password" name="password" placeholder="密码">
+                                    <div class="hint">长度不能少于6个字符</div>
+                                </div>
+                                <div class="row password-strength"><span>密码强度</span>
+                                    <div class="strong-hint">
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <input id="confirm" type="password" placeholder="确认密码">
+                                    <div class="hint">请再次确认密码</div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="row">
+                                    <input id="qq" type="text" name="qq" placeholder="QQ">
+                                </div>
+                                <div class="row">
+                                    <input id="mobile" type="text" name="mobile" placeholder="手机号码">
+                                </div>
+                                <div class="row others">
+                                    <div class="left-link"><a href="#" class="text">忘记密码</a>
+                                    </div>
+                                    <div class="right-link"><a href="#" class="text">已有账号登录</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="" class="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <ul class="nav">
+                <li><span>@2014 circle</span>
+                </li>
+                <li><a href="/html/light.html">联系我们</a>
+                </li>
+                <li><a href="/html/luxery.html">隐私政策</a>
+                </li>
+                <li><a href="/html/brand.html">使用条款</a>
+                </li>
+            </ul>
+            <div class="social"><span>与我们互动</span>
+                <img src="/img/weixin.png">
+                <img src="/img/weibo.png">
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

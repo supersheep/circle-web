@@ -1,102 +1,39 @@
 extend layout
-
 block style
-    link(rel="stylesheet",href="/css/brand.css")
+  style.
+    .content{
+      background-color: #303030
+    }
+
+    .content .panel .aside{
+      width: 45%
+    }
+
+    .content .panel .aside .inner{
+      padding-top: 50px;
+      color:#fff;
+    }
+
+    .content .panel .aside .inner p{
+      margin-bottom: 50px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .content .panel .bigpic{
+      width: 55%
+    }
 
 block content
-    .section.odd
-        img.pic(src="/img/brand-1.png")
-        .article
-            .title About Circle
-            .cont
-                | 生活是一个无边的圆，圆心无处不在，而圆周不在任何地方。
-                br
-                | 始创于2013年的彩色珠宝品牌CIRCLE，关注女性的生命状态，
-                br
-                | 希望通过精心打造的每一件珠宝，倡导一种融通豁达的生活态度，
-                br
-                | 传统与现代、独立与尊严、爱与自由，皆可成为女人们生活的圆心。
-                br
-                | 生命中的每一个选择,如同形形色色的彩色宝石一样丰富，
-                br
-                | 无论向左或向右，都将是一段无尽延伸的旅程。  
-                br
-    .section.even
-        img.pic(src="/img/brand-2.png")
-        .article 
-            .title Circle
-            .cont 
-                | 平衡女性与时间的关系，
-                br
-                | 希望借由流光溢彩的珠宝载你在时间中自由穿梭，
-                br
-                | 敞开女人们对于时间的想象，
-                br
-                | 或是对过去的牵念，或是于现世的挣扎，又或是对未来的希冀。
-                br
-                | 这一场美妙的时间旅行，是女人们心灵的活力之源。  
-                br
-    .section.odd
-        img.pic(src="/img/brand-1.png")
-        .article
-            .title About Circle
-            .cont
-                | 生活是一个无边的圆，圆心无处不在，而圆周不在任何地方。
-                br
-                | 始创于2013年的彩色珠宝品牌CIRCLE，关注女性的生命状态，
-                br
-                | 希望通过精心打造的每一件珠宝，倡导一种融通豁达的生活态度，
-                br
-                | 传统与现代、独立与尊严、爱与自由，皆可成为女人们生活的圆心。
-                br
-                | 生命中的每一个选择,如同形形色色的彩色宝石一样丰富，
-                br
-                | 无论向左或向右，都将是一段无尽延伸的旅程。  
-                br
-    .section.even
-        img.pic(src="/img/brand-2.png")
-        .article 
-            .title Circle
-            .cont 
-                | 平衡女性与时间的关系，
-                br
-                | 希望借由流光溢彩的珠宝载你在时间中自由穿梭，
-                br
-                | 敞开女人们对于时间的想象，
-                br
-                | 或是对过去的牵念，或是于现世的挣扎，又或是对未来的希冀。
-                br
-                | 这一场美妙的时间旅行，是女人们心灵的活力之源。  
-                br
-    .section.odd
-        img.pic(src="/img/brand-1.png")
-        .article
-            .title About Circle
-            .cont
-                | 生活是一个无边的圆，圆心无处不在，而圆周不在任何地方。
-                br
-                | 始创于2013年的彩色珠宝品牌CIRCLE，关注女性的生命状态，
-                br
-                | 希望通过精心打造的每一件珠宝，倡导一种融通豁达的生活态度，
-                br
-                | 传统与现代、独立与尊严、爱与自由，皆可成为女人们生活的圆心。
-                br
-                | 生命中的每一个选择,如同形形色色的彩色宝石一样丰富，
-                br
-                | 无论向左或向右，都将是一段无尽延伸的旅程。  
-                br
-    .section.even
-        img.pic(src="/img/brand-2.png")
-        .article 
-            .title Circle
-            .cont 
-                | 平衡女性与时间的关系，
-                br
-                | 希望借由流光溢彩的珠宝载你在时间中自由穿梭，
-                br
-                | 敞开女人们对于时间的想象，
-                br
-                | 或是对过去的牵念，或是于现世的挣扎，又或是对未来的希冀。
-                br
-                | 这一场美妙的时间旅行，是女人们心灵的活力之源。  
-                br
+  .aside
+    .inner
+      .title 品牌介绍
+      p
+        |彩色珠宝品牌Circle始创于2013年，以关注女性的生命状态为初衷，希望通过彩色珠宝倡导一种融通豁达的女性生活态度。
+      p
+        |作为一个女性高端珠宝订制品牌， Circle聚集了来自欧美、日本的独立设计师和设计品牌，专注于打造适合中国女性的品质彩宝，力求在流行与经典的平衡中寻求中国女性与众不同的优雅格调和历久弥新的时尚内涵。
+      p
+        |Circle相信，女性的生命如同璀璨的彩色宝石一般丰富，个性化的珠宝不但可以帮助女性发掘自身的多种样貌，更可以让女性遇见更好的自己。
+      p
+        |生命如同无边之圆，无论是回到原点，还是找到缘点，又或是走向圆点，拥有circle,你的生命之圆都将拥有无穷的可能，无限的延伸。
+  img.bigpic(src="/photos/brand.jpg")

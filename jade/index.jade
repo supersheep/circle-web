@@ -1,15 +1,13 @@
-include mixins/collection-item
 extend layout
 
-block content
-    .panel
-        .panel-inner
-            +item("/img/detail.jpg")
-            +item("/img/detail.jpg")
-            +item("/img/detail.jpg")
-            +item("/img/detail.jpg")
-            +item("/img/detail.jpg")
 
-block script
-    include init-adjust-panel
-    include init-scroll
+block content
+  .aside
+    .inner
+      .title 轻奢彩宝
+      ul
+        li 
+          a(href="#") 爱，从自己开始。
+        li.active
+          a(href="#") 闺蜜的果香
+  img.bigpic(src="/photos/index.jpg")

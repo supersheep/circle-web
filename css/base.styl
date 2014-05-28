@@ -1,11 +1,7 @@
-@import "variables"
-
-
 body
     font-family: "Hiragino Sans GB","Microsoft Yahei", sans-serif;
-    color: cyan
     line-height: 1.5
-    background: url("../img/bg.png")
+    background-image: url('/img/tile.png')
 
 body,ul,li,h1,h2,h3,h4,p
     margin: 0
@@ -16,109 +12,80 @@ li
     list-style-type: none
 
 a
-    color: cyan
+    color: #000
     text-decoration: none
 
-.content
-    top: 40px
-    bottom: 75px
+.header
+    height: 60px
     width: 100%
-    padding: 40px 0
-    overflow: hidden
-    position: absolute
-    background-image: url("/img/tile.png")
-    background-size: contain
-    .panel
-        background-image: url("../img/bg.png")
-        margin: 0 auto
-        padding: 40px
-        width: 920px
-        background-color: #212526
-        .panel-inner
-            height: 100%
-            overflow: scroll
-            
-.bottom-nav
-    background: url("../img/bg.png")
     position: fixed
-    bottom: 0
-    height: 75px
-    z-index: 99
-    width: 100%
-    .logo
-        line-height: 75px
-        font-size: 18px
-        float: left
-    .bottom-nav-inner
-        width: 1000px
-        margin: 0 auto
-        zoom: 1
-        &:after
-            display: block
-            clear: both
-            content: ""
-        .nav
-            float: right
-            line-height: 75px
-            font-size: 12px
-            li
-                width: 100px
-                text-align: center
-                color: cyan
-                font-size: 12px
-                float: left
+    background-image: url('/img/bg.png')
 
-.collection-item
-    display: block
-    position: relative
-    .bigimg
-        width: 100%
+.header
+    top: 0
+    .brand
+        padding: 10px
+        padding-right: 80px
         display: block
-    .overlay
-        display: none
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        z-index: 50
-        background-color: #000
-        opacity: 0.1
-    &:hover
-        .overlay
-            display: block    
+        float: left
 
-.scrollable
-    overflow: hidden !important
-    .scroll-bar.vertical
-        width: 3px
-        margin: 0 20px 0 10px
-        border-radius: 5px
-        box-shadow:  0 0 10px rgba(255,255,255,0.1) 
-        padding: 2px
-        .thumb
-            background-color: #34a68c
-            width: 3px!important
-            &:after
-                content:""
-                background-image: url("/img/scroll-dot.png")
-                width: 9px
-                height: 9px
-                left: -3px
-                bottom: -3px
-                position: absolute
+.footer
+    background-image: url('/img/bg.png')
+    .nav a
+        padding: 25px 20px 10px 20px
+    .social
+        float: right
+        span
+            color: #fff
+            font-size: 12px
+            padding: 25px 20px 10px 20px
+            float: left
+        img
+            padding: 10px
+            float: left
 
-.bling
-    font-weight: bold
-    .text
-        background-image: linear-gradient(to right, #71b499 0%, #2ca490 38%, #bdded1 78%, #71b499 100%);
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        -webkit-animation: bling 3s infinite
 
-@keyframes bling
-    0%
-        background-position: 90px 0
+.container
+    min-width: 1200px
+    padding: 0 15px
+    clearfix()
 
-    40%
-        background-position: 0 0
+
+.nav
+    float: left
+    li
+        float: left
+        a,span
+            display: block
+            padding: 25px 40px 10px 40px
+            color: #fff
+            font-size: 12px
+
+
+.content
+    clearfix()
+    margin-top: 70px
+    margin-bottom: 10px
+    min-height: 550px
+    background-color: #fff
+    .panel
+        clearfix()
+        padding: 20px 0
+        .bigpic
+            float: right
+            width: 75%
+
+
+.aside
+    float: left
+    width: 25%
+    .inner
+        padding: 150px 75px 0 75px
+        font-size: 12px
+        .title
+            margin-bottom: 35px
+        li
+            list-style-type: disc
+            margin-bottom: 10px
+        .active a
+            color: #787878

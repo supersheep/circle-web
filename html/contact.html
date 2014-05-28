@@ -6,7 +6,26 @@
     <title></title>
     <link rel="stylesheet" href="/css/base.css">
     <script src="/js/jquery.js"></script>
-    <link rel="stylesheet" href="/css/success.css">
+    <style>
+        .content {
+            background-color: #303030
+        }
+        .content .panel .aside {
+            width: 35%
+        }
+        .content .panel .aside .inner {
+            padding-top: 160px;
+            color: #fff;
+        }
+        .content .panel .aside .inner p {
+            margin-bottom: 50px;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+        .content .panel .bigpic {
+            width: 65%
+        }
+    </style>
 </head>
 
 <body>
@@ -29,19 +48,19 @@
     </div>
     <div class="content">
         <div class="panel">
-            <div class="panel">
-                <div class="panel-inner">
-                    <div class="logo">
-                        <img src="/img/logo-dark.png">
-                    </div>
-                    <div class="message">
-                        <p class="succ">购买成功</p>
-                        <p>您的订单编号为 253652987577412</p>
-                        <p>我们将在48小时内为您安排发货</p>
-                        <p>请耐心等待</p>
-                    </div>
+            <div class="aside">
+                <div class="inner">
+                    <div class="title">联系我们</div>
+                    <ul>
+                        <li>公司地址 杭州市上城区中河中路258号瑞丰大厦25B</li>
+                        <li>服务邮箱 service@circlewava.com</li>
+                        <li>客服电话 4008939319</li>
+                        <li>微信订阅号 circle-wechat</li>
+                        <li>微信服务号 circle9319</li>
+                    </ul>
                 </div>
             </div>
+            <img src="/photos/contact.jpg" class="bigpic">
         </div>
     </div>
     <div class="footer">
