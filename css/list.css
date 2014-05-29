@@ -1,0 +1,51 @@
+.header {
+  z-index: 10;
+}
+.content {
+  overflow: hidden;
+  background-color: #171717;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 70px;
+  background-color: #e7e3d8;
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+  left: 0;
+}
+.aside {
+  position: relative;
+  z-index: 5;
+  width: 25%;
+}
+.aside .inner .title {
+  color: #787878;
+}
+.aside .inner a {
+  color: #787878;
+}
+.aside .inner .active a {
+  color: #fff;
+}
+.info {
+  zoom: 1;
+  position: relative;
+  z-index: 5;
+  width: 75%;
+  float: left;
+}
+.info:before,
+.info:after {
+  content: "";
+  display: table;
+}
+.info:after {
+  clear: both;
+}
+.info .list li {
+  width: 50%;
+  float: left;
+}

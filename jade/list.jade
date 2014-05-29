@@ -1,0 +1,49 @@
+extend layout
+
+block style
+    link(rel="stylesheet",href="/css/list.css")
+
+block content
+  .bg
+    img(src="/photos/list-bg.jpg")
+  .aside
+    .inner
+      .title 轻奢彩宝
+      ul
+        li.active 
+          a(href="#") 爱，从自己开始。
+        li
+          a(href="#") 闺蜜的果香
+  .info
+    ul.list
+        li
+            a(href="/detail.html")
+                img(src="/photos/list1.jpg")
+        li
+            a(href="/detail.html")
+                img(src="/photos/list2.jpg")
+        li
+            a(href="/detail.html")
+                img(src="/photos/list1.jpg")
+        li
+            a(href="/detail.html")
+                img(src="/photos/list2.jpg")
+        li
+            a(href="/detail.html")
+                img(src="/photos/list1.jpg")
+        li
+            a(href="/detail.html")
+                img(src="/photos/list2.jpg")
+        li
+            a(href="/detail.html")
+                img(src="/photos/list1.jpg")
+        li
+            a(href="/detail.html")
+                img(src="/photos/list2.jpg")
+
+
+block script
+    script.
+        $(function(){
+            $(".bg").css("height",$(".panel").height());
+        });

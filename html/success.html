@@ -70,6 +70,18 @@
             </div>
         </div>
     </div>
+    <script>
+        (function() {
+            function adjust() {
+                var pan_height = $(window).height() - 40 * 5 - 75;
+                $(".panel").css("height", pan_height);
+            }
+
+            $(window)
+                .on("load", adjust)
+                .on("resize", adjust);
+        })();
+    </script>
 </body>
 
 </html>

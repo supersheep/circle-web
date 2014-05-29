@@ -79,6 +79,51 @@
             </div>
         </div>
     </div>
+    <script>
+        (function() {
+            function adjust() {
+                var pan_height = $(window).height() - 40 * 5 - 75;
+                $(".panel").css("height", pan_height);
+            }
+
+            $(window)
+                .on("load", adjust)
+                .on("resize", adjust);
+        })();
+    </script>
+    <script src="/js/placeholder.js"></script>
+    <script>
+        $(".row").each(function(i, el) {
+            $(el).find("input").on("click", function() {
+                $(".row").removeClass("active");
+                $(el).addClass("active");
+            });
+        });
+        $(".row input").on("blur", function() {
+            $(".row").removeClass("active");
+        });
+
+        $(".row input[type=text],.row input[type=password]").placeholder();
+    </script>
+    <script>
+        $("form").on("submit", function() {
+            var email = $("#email").val().trim();
+            var password = $("#password").val().trim();
+            if (!email) {
+                alert("请输入邮箱");
+                return false;
+            }
+            if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+                alert("邮箱格式不符合规范");
+                return false;
+            }
+            if (!password) {
+                alert("请输入密码");
+                return false;
+            }
+            return true;
+        });
+    </script>
 </body>
 
 </html>
