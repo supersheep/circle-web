@@ -39,6 +39,19 @@ a {
 .header .nav li a {
   padding: 25px 40px 10px 40px;
 }
+.header .user {
+  float: right;
+}
+.header .user li a {
+  padding: 25px 15px 10px 15px;
+}
+.header .user span {
+  display: block;
+  float: right;
+  color: #fff;
+  font-size: 12px;
+  padding: 25px 15px 10px 15px;
+}
 .footer {
   background-image: url("/img/bg.png");
 }
@@ -85,6 +98,7 @@ a {
 }
 .content {
   zoom: 1;
+  min-width: 800px;
   margin-top: 70px;
   margin-bottom: 10px;
   min-height: 550px;

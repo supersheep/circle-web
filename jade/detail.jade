@@ -4,70 +4,57 @@ block style
     link(rel="stylesheet",href="/css/detail.css")
 
 block content
-    .panel
-        .panel-inner
-            #slides
-                a.item(href="javascript:;")
-                    img(src="/img/detail-slide.jpg")
-                    .overlay
-                a.item(href="javascript:;")
-                    img(src="/img/detail-slide.jpg")
-                    .overlay
-                a.item(href="javascript:;")
-                    img(src="/img/detail-slide.jpg")
-                    .overlay
-            .product
-                .head
-                    .title 缘点/CIRCLE轻彩宝系列铂金镶黑色欧泊石戒指
-                    .code 产品编号 003985653
-                .detail
-                    | 欧泊的英文名称为opal，源于拉丁文Opalus，意思是“集宝石之美于一身”，
-                    | 或来源于梵文Upala，意思是“贵重的宝石”。中国的“欧泊”一词，是根据英文音译过来的
-                    | 此款欧泊石来自拉丁美洲，有绚烂的五光十色的火彩，戒托部分采用日本传承已久的十字镂空工艺。 
-                .control
-                    label.label 尺寸
-                    select.input.select
-                        option 大
-                        option 中
-                        option 小
-                    label.label 数量
-                    input.input(value="1",type="number")
-                .price.bling
-                    .text CNY 3,499.00
-                .buy
-                    img.btn(alt="点击购买",src="/img/buy.png")
-            .others
-                ul
-                    li.item
-                        img(src="/img/detail-item.jpg")
-                    li.item
-                        img(src="/img/detail-item.jpg")
-                    li.item
-                        img(src="/img/detail-item.jpg")
+  .aside
+    .inner
+      .title 轻奢彩宝
+      ul
+        li.active 
+          a(href="#") 爱，从自己开始。
+        li
+          a(href="#") 闺蜜的果香
+  .info
+    .pic
+        .inner
+            img(src="/photos/detail.jpg")
+    .detail
+        .head.dblock
+            .inner
+                | 18K金镶嵌钻石珍珠戒指
+                br
+                | K18 diamond & pearl ring  
+                br
+                | 钻石:1.2mmX2Pcs 0.02ct,1.5mmX2Pcs 0.03ct, 珍珠:1.6mmX2Pcs 2mmX2Pcs, 2.2mmX1Pc 黄金：1.11g
+            .price ￥2300
+        .meta.dblock
+            ul.tips
+                li 
+                    a(href="#") 如何保养
+                li 
+                    a(href="#") 品牌服务
+                li.last 
+                    a(href="#") 查看证书
+            ul.thumbs
+                li
+                    img(src="/photos/detail-thumb.jpg")
+        .select.dblock
+                .title 选择戒圈
+                ul.choices
+                    li 10
+                    li 11
+                    li 12
+                    li.active 13
+                    li 14
+                a.howto(href='#') 戒指选择指南
+        .buy.dblock.last
+            a.submit(href='#') 点击购买
+            .hint
+                | 免运费
+                br
+                | 7天无理由退货
+
 
 block script
     script.
-        $(window).load(function(){
-
-            $("#slides").slidesjs({
-                width: 330,
-                height: 475,
-                play:{
-                    auto: true,
-                    interval: 5000,
-                }
-            });
-                
-
-            var pan_height = $(window).height() - 40 * 5 - 75;
-
-
-            $(".others")
-                .css("height", pan_height)
-                .css("width", $(".others").width())
-                .customScrollbar();
-
-            $(".panel").css("height",pan_height);
-            $(".panel").customScrollbar();
+        $(function(){
 
         });
