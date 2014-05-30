@@ -39,7 +39,6 @@
 .info {
   zoom: 1;
   position: relative;
-  z-index: 5;
   width: 700px;
   float: left;
 }
@@ -66,6 +65,10 @@
   width: 50%;
   float: left;
 }
-.info .list li img {
+.info .list li a {
+  display: block;
+  padding: 2px;
+}
+.info .list li a img {
   width: 100%;
 }
