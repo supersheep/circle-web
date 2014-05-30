@@ -45,7 +45,7 @@ a {
 .header .user li a {
   padding: 25px 15px 10px 15px;
 }
-.header .user span {
+.header .user .mine {
   display: block;
   float: right;
   color: #fff;
@@ -98,7 +98,6 @@ a {
 }
 /* widgets */
 .btn {
-  margin-top: 64px;
   width: 220px;
   background-color: #232323;
   color: #fff;
@@ -169,12 +168,82 @@ a {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
+#modal-mine {
+  font-size: 12px;
+}
+#modal-mine h2 {
+  font-size: 12px;
+  margin-bottom: 17px;
+}
+#modal-mine p {
+  margin-bottom: 8px;
+}
+#modal-mine .title {
+  font-weight: bold;
+}
+#modal-mine .menu li {
+  margin-bottom: 20px;
+}
+#modal-mine .menu .active a {
+  font-weight: bold;
+}
+#modal-mine .left {
+  width: 255px;
+  float: left;
+}
+#modal-mine .left .title {
+  margin-bottom: 25px;
+}
+#modal-mine .right {
+  width: 675px;
+  float: left;
+}
+#modal-mine .right .title {
+  margin-bottom: 5px;
+}
+#modal-mine .right .head {
+  border-bottom: 1px dashed #000;
+}
+#modal-mine .modal-body {
+  zoom: 1;
+  padding: 80px 65px;
+}
+#modal-mine .modal-body:before,
+#modal-mine .modal-body:after {
+  content: "";
+  display: table;
+}
+#modal-mine .modal-body:after {
+  clear: both;
+}
+#modal-mine .btn {
+  background-color: #fff;
+  width: 88px;
+  color: #000;
+  border: 1px solid #000;
+}
+#modal-mine .table > thead > tr > th,
+#modal-mine .table > tbody > tr > th,
+#modal-mine .table > tfoot > tr > th,
+#modal-mine .table > thead > tr > td,
+#modal-mine .table > tbody > tr > td,
+#modal-mine .table > tfoot > tr > td {
+  border: none;
+}
+#modal-mine .table th,
+#modal-mine .table td {
+  line-height: 44px;
+  height: 44px;
+}
 #modal-login {
   font-size: 12px;
 }
 #modal-login h2 {
   font-size: 12px;
   margin-bottom: 17px;
+}
+#modal-login .btn {
+  margin-top: 64px;
 }
 #modal-login .inner {
   padding: 60px 0 0 0;

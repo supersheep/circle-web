@@ -1,0 +1,67 @@
+#modal-mine.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-mine-label', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4#modal-mine-label.modal-title
+      .modal-body
+        .left
+          h2.title 我的账户
+          ul.menu
+            li.active 
+              a(href="#") 已完成的订单
+            li 
+              a(href="#") 退货
+            li 
+              a(href="#") 票据
+            li 
+              a(href="#") 地址收藏
+            li 
+              a(href="#") 个人资料
+            li 
+              a(href="#") 登录资料
+            li 
+              a(href="#") 邮件订阅
+        .right
+          .head
+            h2.title 已完成的订单
+            p 在这里您可以查看过往的订单
+          table.table
+            tr
+              th 日期
+              th 订单编号
+              th 订单状态
+              th 金额
+              th 操作
+            tr
+              td 2014/5/20
+              td 000000000000           
+              td 等待付款
+              td 
+                strong ￥2300
+              td
+                .btn 查看详情
+            tr
+              td 2014/5/20
+              td 000000000000           
+              td 等待付款
+              td 
+                strong ￥2300
+              td
+                .btn 查看详情
+            tr
+              td 2014/5/20
+              td 000000000000           
+              td 等待付款
+              td 
+                strong ￥2300
+              td
+                .btn 查看详情
+            tr
+              td 2014/5/20
+              td 000000000000           
+              td 等待付款
+              td 
+                strong ￥2300
+              td
+                .btn 查看详情

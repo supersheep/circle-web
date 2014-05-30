@@ -35,7 +35,7 @@ a
         float: right
         li a
             padding: 25px 15px 10px 15px
-        span
+        .mine
             display: block
             float: right
             color: #fff
@@ -74,7 +74,6 @@ a
 
 /* widgets */
 .btn
-    margin-top:64px
     width: 220px
     background-color: #232323
     color: #fff
@@ -120,11 +119,56 @@ a
     .modal-content
         border-radius: 0
 
+#modal-mine
+    font-size: 12px
+    h2
+        font-size: 12px
+        margin-bottom: 17px  
+    p
+        margin-bottom: 8px
+    .title
+        font-weight: bold
+    .menu
+        li
+            margin-bottom: 20px
+        .active
+            a
+                font-weight: bold
+    .left
+        width: 255px
+        float: left
+        .title
+            margin-bottom: 25px
+    .right
+        width: 675px
+        float: left
+        .title
+            margin-bottom: 5px
+        .head
+            border-bottom: 1px dashed #000
+    .modal-body
+        clearfix()
+        padding: 80px 65px
+    .btn
+        background-color: #fff
+        width: 88px
+        color: #000
+        border: 1px solid #000 
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
+        border: none
+    .table
+        th,td
+            line-height: 44px
+            height: 44px
+
+
 #modal-login
     font-size: 12px
     h2
         font-size: 12px
         margin-bottom: 17px
+    .btn
+        margin-top:64px
     .inner
         padding: 60px 0 0 0
     .right .inner

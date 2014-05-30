@@ -28,7 +28,7 @@ html(lang="en")
                             a(href="javascript:;",data-toggle="modal",data-target="#modal-login") 登录
                         li
                             a(href="javascript:;",data-toggle="modal",data-target="#modal-register") 注册
-                    span
+                    a.mine(href="#",data-toggle="modal",data-target="#modal-mine")
                         | Morning, 王同学
 
 
@@ -52,5 +52,6 @@ html(lang="en")
                     img(src="/img/weibo.png")
         include modals/login
         include modals/register
+        include modals/mine
         block script
         script(src="/js/bootstrap.js")
