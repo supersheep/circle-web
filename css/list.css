@@ -12,6 +12,7 @@
   background-image: url("/photos/list-bg.jpg");
   background-position: left top;
   min-height: 400px;
+  height: 550px;
 }
 .aside {
   position: relative;
@@ -39,7 +40,7 @@
   zoom: 1;
   position: relative;
   z-index: 5;
-  width: 890px;
+  width: 700px;
   float: left;
 }
 .info:before,
@@ -50,7 +51,21 @@
 .info:after {
   clear: both;
 }
+.info .list {
+  zoom: 1;
+}
+.info .list:before,
+.info .list:after {
+  content: "";
+  display: table;
+}
+.info .list:after {
+  clear: both;
+}
 .info .list li {
   width: 50%;
   float: left;
+}
+.info .list li img {
+  width: 100%;
 }
