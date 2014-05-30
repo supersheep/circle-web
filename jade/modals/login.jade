@@ -1,0 +1,26 @@
+#modal-login.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-login-label', aria-hidden='true')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4#modal-login-label.modal-title
+      .modal-body
+        .left
+          .inner
+            h2 我已经是 circle 的用户
+            p(style="margin-bottom:40px") 请输入您的电子邮箱地址和密码来登录。
+            .field
+              .label 电子邮箱地址
+              input.form-control
+            .field
+              .label 密码
+              input.form-control
+            .field
+              a(href="#") 忘记密码？
+            .btn 登录
+        .right
+          .inner
+            h2 我想成为 circle 的用户
+            p 如果您还不时 circle 的用户，亲在此注册。
+            p 请您给我们提供一些必要信息，这将是您再 circle 有个更快更方便的购买过程。
+            .btn 创建新用户

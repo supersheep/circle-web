@@ -96,6 +96,18 @@ a {
   color: #fff;
   font-size: 12px;
 }
+/* widgets */
+.btn {
+  margin-top: 64px;
+  width: 220px;
+  background-color: #232323;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  padding: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
 .content {
   zoom: 1;
   min-width: 800px;
@@ -145,4 +157,69 @@ a {
 }
 .aside .inner .active a {
   color: #787878;
+}
+.modal .modal-lg {
+  width: 1200px;
+}
+.modal .modal-header,
+.modal .modal-footer {
+  border: none;
+}
+.modal .modal-content {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+#modal-login {
+  font-size: 12px;
+}
+#modal-login .modal-content {
+  padding: 80px 0 100px 0;
+}
+#modal-login h2 {
+  font-size: 12px;
+  margin-bottom: 17px;
+}
+#modal-login .inner {
+  padding: 60px 0 0 0;
+}
+#modal-login .right .inner {
+  padding-left: 50px;
+}
+#modal-login .right .inner p {
+  margin-bottom: 8px;
+}
+#modal-login .form-control {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #fff;
+  height: 25px;
+  margin-bottom: 15px;
+  width: 220px;
+}
+#modal-login .label {
+  margin-bottom: 8px;
+}
+#modal-login .left {
+  width: 49%;
+  border-right: 1px solid #000;
+  float: left;
+}
+#modal-login .modal-dialog {
+  width: 1100px;
+}
+#modal-login .modal-body {
+  zoom: 1;
+  padding: 0 110px;
+}
+#modal-login .modal-body:before,
+#modal-login .modal-body:after {
+  content: "";
+  display: table;
+}
+#modal-login .modal-body:after {
+  clear: both;
+}
+#modal-login .right {
+  width: 50%;
+  float: left;
 }

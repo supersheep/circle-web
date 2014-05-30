@@ -46,12 +46,24 @@ block content
                     li 14
                 a.howto(href='#') 戒指选择指南
         .buy.dblock.last
-            a.submit(href='#') 点击购买
+            a.submit(href='#',data-toggle="modal",data-target="#myModal") 点击购买
+
             .hint
                 | 免运费
                 br
                 | 7天无理由退货
 
+        #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+          .modal-dialog.modal-lg
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                h4#myModalLabel.modal-title Modal title
+              .modal-body
+                | ...
+              .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+                button.btn.btn-primary(type='button') Save changes
 
 block script
     script.

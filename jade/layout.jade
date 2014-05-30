@@ -24,8 +24,10 @@ html(lang="en")
                     +item("/","My Circle")
                 .user
                     ul.nav
-                        +item('javascript:;','登录')
-                        +item('javascript:;','注册')
+                        li
+                            a(href="javascript:;",data-toggle="modal",data-target="#modal-login") 登录
+                        li
+                            a(href="javascript:;",data-toggle="modal",data-target="#modal-register") 注册
                     span
                         | Morning, 王同学
 
@@ -48,5 +50,7 @@ html(lang="en")
                     span 与我们互动
                     img(src="/img/weixin.png")
                     img(src="/img/weibo.png")
+        include modals/login
+        include modals/register
         block script
         script(src="/js/bootstrap.js")

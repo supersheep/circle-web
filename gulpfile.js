@@ -38,7 +38,7 @@ gulp.task('stylus', function(){
 });
 
 gulp.task('jade', function(){
-    var source = gulp.src(["./jade/*.jade","!./jade/*layout.jade"])
+    var source = gulp.src(["./jade/**/*.jade","!./jade/*layout.jade"])
         .pipe(jade())
         .pipe(prettify({indentSize:4}))
         .pipe(gulp.dest("html/"))
