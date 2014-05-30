@@ -1,25 +1,26 @@
-.header {
+.header,
+.footer {
   z-index: 10;
+  min-width: 1260px;
+  max-width: 1400px;
 }
 .content {
-  overflow: hidden;
-  background-color: #171717;
-}
-.bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 70px;
-  background-color: #e7e3d8;
-  opacity: 0.1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
-  filter: alpha(opacity=10);
-  left: 0;
+  min-width: 1260px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #2c2c2a;
+  background-image: url("/photos/list-bg.jpg");
+  background-position: left top;
+  min-height: 400px;
 }
 .aside {
   position: relative;
   z-index: 5;
-  width: 25%;
+  width: 370px;
+}
+.aside .inner {
+  position: fixed;
+  font-size: 12px;
 }
 .aside .inner .title {
   color: #787878;
@@ -30,11 +31,15 @@
 .aside .inner .active a {
   color: #fff;
 }
+.aside .ph {
+  width: 100%;
+  padding: 150px 75px 0 75px;
+}
 .info {
   zoom: 1;
   position: relative;
   z-index: 5;
-  width: 75%;
+  width: 890px;
   float: left;
 }
 .info:before,
