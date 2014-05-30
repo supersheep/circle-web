@@ -172,9 +172,6 @@ a {
 #modal-login {
   font-size: 12px;
 }
-#modal-login .modal-content {
-  padding: 80px 0 100px 0;
-}
 #modal-login h2 {
   font-size: 12px;
   margin-bottom: 17px;
@@ -209,7 +206,7 @@ a {
 }
 #modal-login .modal-body {
   zoom: 1;
-  padding: 0 110px;
+  padding: 80px 110px;
 }
 #modal-login .modal-body:before,
 #modal-login .modal-body:after {
