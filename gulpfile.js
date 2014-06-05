@@ -55,7 +55,7 @@ gulp.task('jade', function(){
 
 gulp.task('watch', function () {
   gulp.watch(["./jade/**/*.jade"], ['jade']);
-  gulp.watch(["./css/*.styl"], ['stylus']);
+  gulp.watch(["./css/**/*.styl"], ['stylus']);
 });
 
 gulp.task('default', ['stylus','jade','watch','connect']);

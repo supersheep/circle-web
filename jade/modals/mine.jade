@@ -6,62 +6,29 @@
         h4#modal-mine-label.modal-title
       .modal-body
         .left
-          h2.title 我的账户
           ul.menu
             li.active 
-              a(href="#") 已完成的订单
+              a(href="#",target="#mine") 我的账户
+            li
+              a(href="#",target="#order") 已完成的订单
             li 
-              a(href="#") 退货
+              a(href="#",target="#return") 退货
             li 
-              a(href="#") 票据
+              a(href="#",target="#bill") 票据
             li 
-              a(href="#") 地址收藏
+              a(href="#",target="#address") 地址收藏
             li 
-              a(href="#") 个人资料
+              a(href="#",target="#profile") 个人资料
             li 
-              a(href="#") 登录资料
+              a(href="#",target="#account") 登录资料
             li 
-              a(href="#") 邮件订阅
+              a(href="#",target="#subscribe") 邮件订阅
         .right
-          .head
-            h2.title 已完成的订单
-            p 在这里您可以查看过往的订单
-          table.table
-            tr
-              th 日期
-              th 订单编号
-              th 订单状态
-              th 金额
-              th 操作
-            tr
-              td 2014/5/20
-              td 000000000000           
-              td 等待付款
-              td 
-                strong ￥2300
-              td
-                .btn 查看详情
-            tr
-              td 2014/5/20
-              td 000000000000           
-              td 等待付款
-              td 
-                strong ￥2300
-              td
-                .btn 查看详情
-            tr
-              td 2014/5/20
-              td 000000000000           
-              td 等待付款
-              td 
-                strong ￥2300
-              td
-                .btn 查看详情
-            tr
-              td 2014/5/20
-              td 000000000000           
-              td 等待付款
-              td 
-                strong ￥2300
-              td
-                .btn 查看详情
+          include ./intro
+          include ./order
+          include ./return
+          include ./bill
+          include ./address
+          include ./profile
+          include ./account
+          include ./subscribe
