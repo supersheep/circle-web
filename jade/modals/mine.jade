@@ -8,13 +8,13 @@
         .left
           ul.menu
             li.active 
-              a(href="#",target="#mine") 我的账户
+              a(href="#",target="#intro") 我的账户
             li
               a(href="#",target="#order") 已完成的订单
             li 
               a(href="#",target="#return") 退货
             li 
-              a(href="#",target="#bill") 票据
+              a(href="#",target="#recipt") 票据
             li 
               a(href="#",target="#address") 地址收藏
             li 
@@ -26,8 +26,9 @@
         .right
           include ./intro
           include ./order
+          include ./order-detail
           include ./return
-          include ./bill
+          include ./recipt
           include ./address
           include ./profile
           include ./account

@@ -1,5 +1,5 @@
 body
-    font-family: "Hiragino Sans GB","Microsoft Yahei", sans-serif;
+    font-family: "Hiragino Sans GB","Microsoft Yahei", sans-serif
     line-height: 1.5
     background-image: url('/img/tile.png')
 
@@ -219,14 +219,28 @@ a
         width: 88px
         color: #000
         border: 1px solid #000 
+        &:hover
+            background:#000
+            color: #fff
     .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
         border: none
     .table
         th,td
             line-height: 44px
             height: 44px
+    .table-bordered
+        width:100%
+        margin-top:30px
+        margin-bottom:20px
+        border: none
+        th,td
+            border: none
+            border-bottom: 1px dashed #b7b3b2
+            padding:20px
     .tabbody
         display: none
+        .head
+            border-bottom:1px dashed #000
     .tabbody.active
         display: block
 

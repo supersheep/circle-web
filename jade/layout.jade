@@ -63,8 +63,14 @@ html(lang="en")
             var menus = $(".modal-body .menu li");
             menus.click(function(e){
                 e.preventDefault();
-                menus.removeClass('active');
-                $(this).addClass('active');
-                $('.tabbody').removeClass('active');
-                $($(this).find('a').attr('target')).addClass('active');
+                menus.removeClass("active");
+                $(this).addClass("active");
+                $('.tabbody').hide();
+                $($(this).find('a').attr('target')).show();
+            });
+
+            // 弹层
+            $("#order .btn").on("click",function(){
+                $(".tabbody").hide();
+                $("#order-detail").show();
             });
