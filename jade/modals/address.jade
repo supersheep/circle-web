@@ -1,1 +1,48 @@
-div#address.tabbody
+div#address.tabbody(style="display:block")
+  .head
+    h2.title 地址收藏
+    p 请添加所有您想要的寄送地址（你的家、工作地点、常住址...）这样您就不需要在每次下订单时填写寄送地址。 
+  .bd
+    .field
+      .name 姓名 *
+      input.form-control
+      .hint 请输入收货人的姓名
+    .field
+      .name 直辖市/省 *
+      select.form-control 选择
+        option 浙江
+        option 江苏
+      .hint
+    .field
+      .name 市 *
+      select.form-control --
+        option 上海
+        option 广州
+    .field
+      .name 县区 *
+      select.form-control
+        option 闵行
+      .hint 
+    .field
+      .name 国家 *
+      select.form-control
+        option 尼加拉瓜
+        option 尼日利亚
+      .hint 
+    .field
+      .name 详细地址 *
+      input.form-control
+      .hint
+        i.icon-warn 
+        | 此项为必填
+    .field
+      .name 邮政编码 *
+      input.form-control
+      .hint 
+    .field
+      .name 联系方式 *
+      input.form-control
+      .hint
+        i.icon-ok
+
+    .btn(style="margin-top: 30px;margin-left: 170px;width: 200px;") 更新地址

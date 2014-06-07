@@ -346,6 +346,64 @@ a {
 #modal-mine .tabbody.active {
   display: block;
 }
+#modal-mine .field {
+  zoom: 1;
+  margin-top: 15px;
+}
+#modal-mine .field:before,
+#modal-mine .field:after {
+  content: "";
+  display: table;
+}
+#modal-mine .field:after {
+  clear: both;
+}
+#modal-mine .field .name {
+  float: left;
+  width: 145px;
+}
+#modal-mine .field .form-control {
+  float: left;
+  width: 245px;
+  height: 13px;
+  font-size: 12px;
+  padding: 7px 15px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: none;
+  border: 1px solid #717171;
+}
+#modal-mine .field select.form-control {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 260px 10px;
+  background-image: url("/img/down-arr.png");
+}
+#modal-mine .field .hint {
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #959595;
+}
+#modal-mine .field .hint i.icon-ok {
+  background-image: url("/img/icon-ok.png");
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+#modal-mine .field .hint i.icon-warn {
+  background-image: url("/img/icon-warn.png");
+  width: 13px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
 #intro.tabbody .title {
   margin-bottom: 13px;
 }
