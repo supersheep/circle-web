@@ -1,0 +1,21 @@
+#modal-register {
+  font-size: 12px;
+}
+#modal-register .head h2 {
+  font-weight: bold;
+  font-size: 12px;
+}
+#modal-register .head p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+#modal-register .modal-body {
+  width: 675px;
+  margin: 0 auto;
+}
+#modal-register .title {
+  margin-bottom: 5px;
+}
+#modal-register .head {
+  border-bottom: 1px dashed #000;
+}

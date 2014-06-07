@@ -21,14 +21,13 @@ a {
   color: #000;
   text-decoration: none;
 }
+/* header */
 .header {
   height: 60px;
   width: 100%;
   position: fixed;
   z-index: 1;
   background-image: url("/img/bg.png");
-}
-.header {
   top: 0;
 }
 .header .brand {
@@ -80,6 +79,7 @@ a {
 .header .dropdown-menu > li > a:hover {
   background-color: #101313;
 }
+/* footer */
 .footer {
   background-image: url("/img/bg.png");
   position: fixed;
@@ -126,16 +126,23 @@ a {
   color: #fff;
   font-size: 12px;
 }
-/* widgets */
 .btn {
-  width: 220px;
-  background-color: #232323;
-  color: #fff;
-  height: 44px;
-  line-height: 44px;
-  padding: 0;
+  background-color: #fff;
+  width: 88px;
+  color: #000;
+  border: 1px solid #000;
   -webkit-border-radius: 0;
   border-radius: 0;
+  margin-bottom: 10px;
+  display: block;
+}
+.btn.btn-black,
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+.btn.btn-big {
+  width: 200px;
 }
 .content {
   zoom: 1;
@@ -200,174 +207,20 @@ a {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-#modal-login {
-  font-size: 12px;
-}
-#modal-login h2 {
-  font-size: 12px;
-  margin-bottom: 17px;
-}
-#modal-login .btn {
-  margin-top: 64px;
-}
-#modal-login .inner {
-  padding: 60px 0 0 0;
-}
-#modal-login .right .inner {
-  padding-left: 50px;
-}
-#modal-login .right .inner p {
-  margin-bottom: 8px;
-}
-#modal-login .form-control {
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  background: #fff;
-  height: 25px;
-  margin-bottom: 15px;
-  width: 220px;
-}
-#modal-login .label {
-  margin-bottom: 8px;
-}
-#modal-login .left {
-  width: 49%;
-  border-right: 1px solid #000;
-  float: left;
-}
-#modal-login .modal-dialog {
-  width: 1100px;
-}
-#modal-login .modal-body {
+.block {
   zoom: 1;
-  padding: 80px 110px;
-}
-#modal-login .modal-body:before,
-#modal-login .modal-body:after {
-  content: "";
-  display: table;
-}
-#modal-login .modal-body:after {
-  clear: both;
-}
-#modal-login .right {
-  width: 50%;
-  float: left;
-}
-#modal-mine {
-  font-size: 12px;
-}
-#modal-mine h2 {
-  font-size: 12px;
-  margin-bottom: 17px;
-}
-#modal-mine p {
-  margin-bottom: 8px;
-}
-#modal-mine .title {
-  font-weight: bold;
-}
-#modal-mine .menu li {
-  margin-bottom: 20px;
-}
-#modal-mine .menu .active a {
-  font-weight: bold;
-}
-#modal-mine .left {
-  width: 255px;
-  float: left;
-}
-#modal-mine .left .title {
-  margin-bottom: 25px;
-}
-#modal-mine .right {
-  width: 675px;
-  float: left;
-}
-#modal-mine .right .title {
-  margin-bottom: 5px;
-}
-#modal-mine .right .head {
-  border-bottom: 1px dashed #000;
-}
-#modal-mine .modal-body {
-  zoom: 1;
-  padding: 80px 65px;
-}
-#modal-mine .modal-body:before,
-#modal-mine .modal-body:after {
-  content: "";
-  display: table;
-}
-#modal-mine .modal-body:after {
-  clear: both;
-}
-#modal-mine .btn {
-  background-color: #fff;
-  width: 88px;
-  color: #000;
-  border: 1px solid #000;
-}
-#modal-mine .btn:hover {
-  background: #000;
-  color: #fff;
-}
-#modal-mine .table > thead > tr > th,
-#modal-mine .table > tbody > tr > th,
-#modal-mine .table > tfoot > tr > th,
-#modal-mine .table > thead > tr > td,
-#modal-mine .table > tbody > tr > td,
-#modal-mine .table > tfoot > tr > td {
-  border: none;
-}
-#modal-mine .table th,
-#modal-mine .table td {
-  line-height: 44px;
-  height: 44px;
-}
-#modal-mine .table-bordered {
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  border: none;
-}
-#modal-mine .table-bordered th,
-#modal-mine .table-bordered td {
-  border: none;
-  border-bottom: 1px dashed #b7b3b2;
-  padding: 20px;
-}
-#modal-mine .tabbody {
-  display: none;
-}
-#modal-mine .tabbody .head {
-  border-bottom: 1px dashed #000;
-}
-#modal-mine .tabbody.active {
-  display: block;
-}
-#modal-register .head h2 {
-  font-weight: bold;
-  font-size: 12px;
-}
-#modal-register .head p {
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-#modal-register .modal-body {
-  width: 675px;
-  margin: 0 auto;
-}
-#modal-register .title {
-  margin-bottom: 5px;
-}
-#modal-register .head {
-  border-bottom: 1px dashed #000;
-}
-#modal-register .block {
   padding-bottom: 15px;
   border-bottom: 1px dashed #b5b1af;
 }
+.block:before,
+.block:after {
+  content: "";
+  display: table;
+}
+.block:after {
+  clear: both;
+}
+/* field */
 .field {
   zoom: 1;
   margin-top: 15px;
@@ -425,6 +278,165 @@ a {
   position: relative;
   top: 3px;
   margin-right: 5px;
+}
+/* mine */
+#modal-mine {
+  font-size: 12px;
+}
+#modal-mine h2 {
+  font-size: 12px;
+  margin-bottom: 17px;
+}
+#modal-mine p {
+  margin-bottom: 8px;
+}
+#modal-mine .title {
+  font-weight: bold;
+}
+#modal-mine .menu li {
+  margin-bottom: 20px;
+}
+#modal-mine .menu .active a {
+  font-weight: bold;
+}
+#modal-mine .left {
+  width: 255px;
+  float: left;
+}
+#modal-mine .left .title {
+  margin-bottom: 25px;
+}
+#modal-mine .right {
+  width: 675px;
+  float: left;
+}
+#modal-mine .right .title {
+  margin-bottom: 5px;
+}
+#modal-mine .right .head {
+  border-bottom: 1px dashed #000;
+}
+#modal-mine .modal-body {
+  zoom: 1;
+  padding: 80px 65px;
+}
+#modal-mine .modal-body:before,
+#modal-mine .modal-body:after {
+  content: "";
+  display: table;
+}
+#modal-mine .modal-body:after {
+  clear: both;
+}
+#modal-mine .table > thead > tr > th,
+#modal-mine .table > tbody > tr > th,
+#modal-mine .table > tfoot > tr > th,
+#modal-mine .table > thead > tr > td,
+#modal-mine .table > tbody > tr > td,
+#modal-mine .table > tfoot > tr > td {
+  border: none;
+}
+#modal-mine .table th,
+#modal-mine .table td {
+  line-height: 44px;
+  height: 44px;
+}
+#modal-mine .table-bordered {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: none;
+}
+#modal-mine .table-bordered th,
+#modal-mine .table-bordered td {
+  border: none;
+  border-bottom: 1px dashed #b7b3b2;
+  padding: 20px;
+}
+#modal-mine .tabbody {
+  display: none;
+}
+#modal-mine .tabbody .head {
+  border-bottom: 1px dashed #000;
+}
+#modal-mine .tabbody.active {
+  display: block;
+}
+/* login */
+#modal-login {
+  font-size: 12px;
+}
+#modal-login h2 {
+  font-size: 12px;
+  margin-bottom: 17px;
+}
+#modal-login .btn {
+  margin-top: 64px;
+}
+#modal-login .inner {
+  padding: 60px 0 0 0;
+}
+#modal-login .right .inner {
+  padding-left: 50px;
+}
+#modal-login .right .inner p {
+  margin-bottom: 8px;
+}
+#modal-login .form-control {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #fff;
+  height: 25px;
+  margin-bottom: 15px;
+  width: 220px;
+}
+#modal-login .label {
+  margin-bottom: 8px;
+}
+#modal-login .left {
+  width: 49%;
+  border-right: 1px solid #000;
+  float: left;
+}
+#modal-login .modal-dialog {
+  width: 1100px;
+}
+#modal-login .modal-body {
+  zoom: 1;
+  padding: 80px 110px;
+}
+#modal-login .modal-body:before,
+#modal-login .modal-body:after {
+  content: "";
+  display: table;
+}
+#modal-login .modal-body:after {
+  clear: both;
+}
+#modal-login .right {
+  width: 50%;
+  float: left;
+}
+#modal-register {
+  font-size: 12px;
+}
+#modal-register .head h2 {
+  font-weight: bold;
+  font-size: 12px;
+}
+#modal-register .head p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+#modal-register .modal-body {
+  width: 675px;
+  margin: 0 auto;
+}
+#modal-register .title {
+  margin-bottom: 5px;
+}
+#modal-register .head {
+  border-bottom: 1px dashed #000;
 }
 #intro.tabbody .title {
   margin-bottom: 13px;

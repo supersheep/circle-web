@@ -15,14 +15,13 @@ a
     color: #000
     text-decoration: none
 
+/* header */
 .header
     height: 60px
     width: 100%
     position: fixed
     z-index: 1
     background-image: url('/img/bg.png')
-
-.header
     top: 0
     .brand
         padding: 10px
@@ -62,8 +61,9 @@ a
             padding: 10px 
             border-bottom: 1px dashed #414141
             &:hover
-                background-color: #101313
+                background-color: #101313    
 
+/* footer */
 .footer
     background-image: url('/img/bg.png')
     position: fixed
@@ -98,15 +98,19 @@ a
             color: #fff
             font-size: 12px
 
-/* widgets */
 .btn
-    width: 220px
-    background-color: #232323
-    color: #fff
-    height: 44px
-    line-height: 44px
-    padding: 0
+    background-color: #fff
+    width: 88px
+    color: #000
+    border: 1px solid #000 
     border-radius: 0
+    margin-bottom: 10px
+    display: block
+    &.btn-black,&:hover
+        background:#000
+        color: #fff
+    &.btn-big
+        width: 200px
 
 .content
     clearfix()
@@ -148,122 +152,14 @@ a
         border-radius: 0
 
 
-
-#modal-login
-    font-size: 12px
-    h2
-        font-size: 12px
-        margin-bottom: 17px
-    .btn
-        margin-top:64px
-    .inner
-        padding: 60px 0 0 0
-    .right .inner
-        padding-left: 50px
-        p
-            margin-bottom: 8px
-    .form-control
-        border-radius: 0
-        background: #fff
-        height: 25px
-        margin-bottom: 15px
-        width: 220px
-    .label
-        margin-bottom: 8px
-    .left
-        width: 49%
-        border-right: 1px solid #000
-        float: left
-    .modal-dialog
-        width: 1100px
-    .modal-body
-        clearfix()
-        padding: 80px 110px
-    .right
-        width: 50%
-        float: left
+.block
+    clearfix()
+    padding-bottom: 15px
+    border-bottom: 1px dashed #b5b1af
 
 
-#modal-mine
-    font-size: 12px
-    h2
-        font-size: 12px
-        margin-bottom: 17px  
-    p
-        margin-bottom: 8px
-    .title
-        font-weight: bold
-    .menu
-        li
-            margin-bottom: 20px
-        .active
-            a
-                font-weight: bold
-    .left
-        width: 255px
-        float: left
-        .title
-            margin-bottom: 25px
-    .right
-        width: 675px
-        float: left
-        .title
-            margin-bottom: 5px
-        .head
-            border-bottom: 1px dashed #000
-    .modal-body
-        clearfix()
-        padding: 80px 65px
-    .btn
-        background-color: #fff
-        width: 88px
-        color: #000
-        border: 1px solid #000 
-        &:hover
-            background:#000
-            color: #fff
-    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
-        border: none
-    .table
-        th,td
-            line-height: 44px
-            height: 44px
-    .table-bordered
-        width:100%
-        margin-top:30px
-        margin-bottom:20px
-        border: none
-        th,td
-            border: none
-            border-bottom: 1px dashed #b7b3b2
-            padding:20px
-    .tabbody
-        display: none
-        .head
-            border-bottom:1px dashed #000
-    .tabbody.active
-        display: block
-    
-#modal-register
-    .head
-        h2
-            font-weight: bold
-            font-size: 12px
-        p
-            font-size: 12px
-            margin-bottom: 10px
-    .modal-body
-        width: 675px
-        margin: 0 auto
-    .title
-        margin-bottom: 5px
-    .head
-        border-bottom: 1px dashed #000
-    .block
-        padding-bottom: 15px
-        border-bottom: 1px dashed #b5b1af
 
-
+/* field */
 .field
     clearfix()
     margin-top: 15px
@@ -305,5 +201,94 @@ a
             top: 3px
             margin-right: 5px
 
+/* mine */
+#modal-mine
+    font-size: 12px
+    h2
+        font-size: 12px
+        margin-bottom: 17px  
+    p
+        margin-bottom: 8px
+    .title
+        font-weight: bold
+    .menu
+        li
+            margin-bottom: 20px
+        .active
+            a
+                font-weight: bold
+    .left
+        width: 255px
+        float: left
+        .title
+            margin-bottom: 25px
+    .right
+        width: 675px
+        float: left
+        .title
+            margin-bottom: 5px
+        .head
+            border-bottom: 1px dashed #000
+    .modal-body
+        clearfix()
+        padding: 80px 65px
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td
+        border: none
+    .table
+        th,td
+            line-height: 44px
+            height: 44px
+    .table-bordered
+        width:100%
+        margin-top:30px
+        margin-bottom:20px
+        border: none
+        th,td
+            border: none
+            border-bottom: 1px dashed #b7b3b2
+            padding:20px
+    .tabbody
+        display: none
+        .head
+            border-bottom:1px dashed #000
+    .tabbody.active
+        display: block
+
+/* login */
+#modal-login
+    font-size: 12px
+    h2
+        font-size: 12px
+        margin-bottom: 17px
+    .btn
+        margin-top:64px
+    .inner
+        padding: 60px 0 0 0
+    .right .inner
+        padding-left: 50px
+        p
+            margin-bottom: 8px
+    .form-control
+        border-radius: 0
+        background: #fff
+        height: 25px
+        margin-bottom: 15px
+        width: 220px
+    .label
+        margin-bottom: 8px
+    .left
+        width: 49%
+        border-right: 1px solid #000
+        float: left
+    .modal-dialog
+        width: 1100px
+    .modal-body
+        clearfix()
+        padding: 80px 110px
+    .right
+        width: 50%
+        float: left
+
+@import "modals/register"
 @import "modals/intro"
 @import "modals/address"

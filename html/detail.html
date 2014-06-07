@@ -260,7 +260,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="display:block; margin:20px auto;width:200px;" class="btn">注册新用户</div>
+                        <div style="margin:20px auto;" class="btn btn-big btn-black btn-submit">注册新用户</div>
+                    </div>
+                    <div style="display:none;margin-top:20px;margin-bottom:200px" class="success"><strong>新用户注册成功</strong>
+                        <div style="float:right" class="btn btn-big btn-black btn-check">点击到邮件激活账户</div>
                     </div>
                 </div>
             </div>
@@ -295,7 +298,7 @@
                         </ul>
                     </div>
                     <div class="right">
-                        <div id="intro" class="tabbody">
+                        <div id="intro" style="display:block" class="tabbody">
                             <h2 class="title">已完成的订单</h2>
                             <p>随时查看您的订单的状态。 如果订单在寄往您的地址中，您可以通过跟踪链接去查看订单状态。</p>
                             <h2 class="title">退货</h2>
@@ -397,7 +400,7 @@
                                 <p>中国</p>
                                 <p>电话：</p>
                                 <p>手机：+86 18616365550</p>
-                                <table class="tabled-bordered">
+                                <table class="table-bordered">
                                     <tr>
                                         <th>商品名称</th>
                                         <th>商品货号</th>
@@ -494,6 +497,34 @@
                                 <p>请添加所有您想要的寄送地址（你的家、工作地点、常住址...）这样您就不需要在每次下订单时填写寄送地址。</p>
                             </div>
                             <div class="bd">
+                                <div style="padding:20px 0;" class="block">
+                                    <div style="float:right;" class="btn btn-black btn-create btn-big">添加新地址</div>
+                                </div>
+                                <table class="table-bordered">
+                                    <tr>
+                                        <th style="width:200px">地址</th>
+                                        <th>收件人</th>
+                                        <th>联系电话</th>
+                                        <th style="width:200px">操作</th>
+                                    </tr>
+                                    <tr>
+                                        <td>彩虹城1508滨江区310053杭州市浙江省中国</td>
+                                        <td>王庆茹</td>
+                                        <td>+86 18616365550</td>
+                                        <td>
+                                            <div class="btn btn-black btn-edit">修改</div>
+                                            <div class="btn btn-black btn-remove">删除</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="address-update" class="tabbody">
+                            <div class="head">
+                                <h2 class="title">地址收藏</h2>
+                                <p>请添加所有您想要的寄送地址（你的家、工作地点、常住址...）这样您就不需要在每次下订单时填写寄送地址。</p>
+                            </div>
+                            <div class="bd">
                                 <div class="field">
                                     <div class="name">姓名 *</div>
                                     <input class="form-control">
@@ -546,68 +577,96 @@
                                     <div class="hint"><i class="icon-ok"></i>
                                     </div>
                                 </div>
-                                <div style="margin-top: 30px;margin-left: 170px;width: 200px;" class="btn">更新地址</div>
+                                <div style="margin-top: 30px;margin-left: 170px;width: 200px;" class="btn btn-black btn-update">更新地址</div>
                             </div>
                         </div>
-                        <div id="address" style="display:block" class="tabbody"></div>
-                        <div class="head">
-                            <h2 class="title">修改个人资料</h2>
-                            <p>您可以查看和修改个人资料（姓名、地址、电话...）和您的的联系方式，以方便今后的购物。</p>
+                        <div id="address-removed" class="tabbody">
+                            <div class="head">
+                                <h2 class="title">地址收藏</h2>
+                                <p>请添加所有您想要的寄送地址（你的家、工作地点、常住址...）这样您就不需要在每次下订单时填写寄送地址。</p>
+                            </div>
+                            <div style="margin-top:20px" class="bd"><strong>地址已成功删除</strong>
+                                <div style="float:right" class="btn btn-big btn-black btn-check">查看我的地址收藏</div>
+                            </div>
                         </div>
-                        <div class="bd">
-                            <div class="field">
-                                <div class="name">姓名 *</div>
-                                <input class="form-control">
-                                <div class="hint">请输入收货人的姓名</div>
+                        <div id="address-updated" class="tabbody">
+                            <div class="head">
+                                <h2 class="title">地址收藏</h2>
+                                <p>请添加所有您想要的寄送地址（你的家、工作地点、常住址...）这样您就不需要在每次下订单时填写寄送地址。</p>
                             </div>
-                            <div class="field">
-                                <div class="name">直辖市/省 *</div>
-                                <select class="form-control">选择
-                                    <option>浙江</option>
-                                    <option>江苏</option>
-                                </select>
-                                <div class="hint"></div>
+                            <div style="margin-top:20px" class="bd"><strong>新地址已成功保存</strong>
+                                <div style="float:right" class="btn btn-big btn-black btn-check">查看我的地址收藏</div>
                             </div>
-                            <div class="field">
-                                <div class="name">市 *</div>
-                                <select class="form-control">
-                                    <option>--</option>
-                                    <option>上海</option>
-                                    <option>广州</option>
-                                </select>
+                        </div>
+                        <div id="profile" class="tabbody">
+                            <div class="head">
+                                <h2 class="title">修改个人资料</h2>
+                                <p>您可以查看和修改个人资料（姓名、地址、电话...）和您的的联系方式，以方便今后的购物。</p>
                             </div>
-                            <div class="field">
-                                <div class="name">县区 *</div>
-                                <select class="form-control">
-                                    <option>闵行</option>
-                                </select>
-                                <div class="hint"></div>
-                            </div>
-                            <div class="field">
-                                <div class="name">国家 *</div>
-                                <select class="form-control">
-                                    <option>尼加拉瓜</option>
-                                    <option>尼日利亚</option>
-                                </select>
-                                <div class="hint"></div>
-                            </div>
-                            <div class="field">
-                                <div class="name">详细地址 *</div>
-                                <input class="form-control">
-                                <div class="hint"><i class="icon-warn"></i>此项为必填</div>
-                            </div>
-                            <div class="field">
-                                <div class="name">邮政编码 *</div>
-                                <input class="form-control">
-                                <div class="hint"></div>
-                            </div>
-                            <div class="field">
-                                <div class="name">联系方式 *</div>
-                                <input class="form-control">
-                                <div class="hint"><i class="icon-ok"></i>
+                            <div class="bd">
+                                <div class="field">
+                                    <div class="name">姓名 *</div>
+                                    <input class="form-control">
+                                    <div class="hint">请输入收货人的姓名</div>
                                 </div>
+                                <div class="field">
+                                    <div class="name">直辖市/省 *</div>
+                                    <select class="form-control">选择
+                                        <option>浙江</option>
+                                        <option>江苏</option>
+                                    </select>
+                                    <div class="hint"></div>
+                                </div>
+                                <div class="field">
+                                    <div class="name">市 *</div>
+                                    <select class="form-control">
+                                        <option>--</option>
+                                        <option>上海</option>
+                                        <option>广州</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <div class="name">县区 *</div>
+                                    <select class="form-control">
+                                        <option>闵行</option>
+                                    </select>
+                                    <div class="hint"></div>
+                                </div>
+                                <div class="field">
+                                    <div class="name">国家 *</div>
+                                    <select class="form-control">
+                                        <option>尼加拉瓜</option>
+                                        <option>尼日利亚</option>
+                                    </select>
+                                    <div class="hint"></div>
+                                </div>
+                                <div class="field">
+                                    <div class="name">详细地址 *</div>
+                                    <input class="form-control">
+                                    <div class="hint"><i class="icon-warn"></i>此项为必填</div>
+                                </div>
+                                <div class="field">
+                                    <div class="name">邮政编码 *</div>
+                                    <input class="form-control">
+                                    <div class="hint"></div>
+                                </div>
+                                <div class="field">
+                                    <div class="name">联系方式 *</div>
+                                    <input class="form-control">
+                                    <div class="hint"><i class="icon-ok"></i>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 30px;margin-left: 170px;width: 200px;" class="btn btn-black btn-update">更新个人资料</div>
                             </div>
-                            <div style="margin-top: 30px;margin-left: 170px;width: 200px;" class="btn">更新个人资料</div>
+                        </div>
+                        <div id="profile-updated" class="tabbody">
+                            <div class="head">
+                                <h2 class="title">修改个人资料</h2>
+                                <p>您可以查看和修改个人资料（姓名、地址、电话...）和您的的联系方式，以方便今后的购物。</p>
+                            </div>
+                            <div style="margin-top:20px" class="bd"><strong>个人资料已成功更新</strong>
+                                <div style="float:right" class="btn btn-big btn-black btn-check">查看我的个人资料</div>
+                            </div>
                         </div>
                         <div id="account" class="tabbody"></div>
                         <div id="subscribe" class="tabbody"></div>
@@ -623,6 +682,7 @@
     </script>
     <script src="/js/bootstrap.js"></script>
     <script>
+        // 弹层tab切换
         var menus = $(".modal-body .menu li");
         menus.click(function(e) {
             e.preventDefault();
@@ -632,10 +692,57 @@
             $($(this).find('a').attr('target')).show();
         });
 
-         // 弹层
-        $("#order .btn").on("click", function() {
+         // 订单详情
+        $("#order .btn").click(function() {
             $(".tabbody").hide();
             $("#order-detail").show();
+        });
+
+         // 地址
+         // 创建地址
+        $("#address .btn-create").click(function() {
+            $(".tabbody").hide();
+            $("#address-update").show();
+        });
+         // 修改地址
+        $("#address .btn-edit").click(function() {
+            $(".tabbody").hide();
+            $("#address-update").show();
+        });
+         // 删除地址
+        $("#address .btn-remove").click(function() {
+            $(".tabbody").hide();
+            $("#address-removed").show();
+        });
+         // 更新地址
+        $("#address-update .btn-update").click(function() {
+            // check form
+            // submit ajax
+            $(".tabbody").hide();
+            $("#address-updated").show();
+        });
+         // 查看我的地址收藏
+        $("#address-updated .btn-check, #address-removed .btn-check").click(function() {
+            $(".tabbody").hide();
+            $("#address").show();
+        });
+
+         // 个人资料
+        $("#profile .btn-update").click(function() {
+            // check form
+            // send ajax
+            $(".tabbody").hide();
+            $("#profile-updated").show();
+        });
+        $("#profile-updated .btn-check").click(function() {
+            $(".tabbody").hide();
+            $("#profile").show();
+        });
+
+         // 注册
+        $("#modal-register .btn-submit").click(function() {
+            $("#modal-register .bd").hide();
+            $("#modal-register .success").show();
         });
     </script>
 </body>

@@ -60,6 +60,7 @@ html(lang="en")
         block script
         script(src="/js/bootstrap.js")
         script.
+            // 弹层tab切换
             var menus = $(".modal-body .menu li");
             menus.click(function(e){
                 e.preventDefault();
@@ -69,8 +70,55 @@ html(lang="en")
                 $($(this).find('a').attr('target')).show();
             });
 
-            // 弹层
-            $("#order .btn").on("click",function(){
+            // 订单详情
+            $("#order .btn").click(function(){
                 $(".tabbody").hide();
                 $("#order-detail").show();
+            });
+
+            // 地址
+            // 创建地址
+            $("#address .btn-create").click(function(){
+                $(".tabbody").hide();
+                $("#address-update").show();
+            });
+            // 修改地址
+            $("#address .btn-edit").click(function(){
+                $(".tabbody").hide();
+                $("#address-update").show();
+            });
+            // 删除地址
+            $("#address .btn-remove").click(function(){
+                $(".tabbody").hide();
+                $("#address-removed").show();
+            });
+            // 更新地址
+            $("#address-update .btn-update").click(function(){
+                // check form
+                // submit ajax
+                $(".tabbody").hide();
+                $("#address-updated").show();
+            });
+            // 查看我的地址收藏
+            $("#address-updated .btn-check, #address-removed .btn-check").click(function(){
+                $(".tabbody").hide();
+                $("#address").show();
+            });
+
+            // 个人资料
+            $("#profile .btn-update").click(function(){
+                // check form
+                // send ajax
+                $(".tabbody").hide();
+                $("#profile-updated").show();
+            });
+            $("#profile-updated .btn-check").click(function(){
+                $(".tabbody").hide();
+                $("#profile").show();
+            });
+
+            // 注册
+            $("#modal-register .btn-submit").click(function(){
+                $("#modal-register .bd").hide();
+                $("#modal-register .success").show();
             });
