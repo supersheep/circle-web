@@ -346,23 +346,45 @@ a {
 #modal-mine .tabbody.active {
   display: block;
 }
-#modal-mine .field {
+#modal-register .head h2 {
+  font-weight: bold;
+  font-size: 12px;
+}
+#modal-register .head p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+#modal-register .modal-body {
+  width: 675px;
+  margin: 0 auto;
+}
+#modal-register .title {
+  margin-bottom: 5px;
+}
+#modal-register .head {
+  border-bottom: 1px dashed #000;
+}
+#modal-register .block {
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #b5b1af;
+}
+.field {
   zoom: 1;
   margin-top: 15px;
 }
-#modal-mine .field:before,
-#modal-mine .field:after {
+.field:before,
+.field:after {
   content: "";
   display: table;
 }
-#modal-mine .field:after {
+.field:after {
   clear: both;
 }
-#modal-mine .field .name {
+.field .name {
   float: left;
   width: 145px;
 }
-#modal-mine .field .form-control {
+.field .form-control {
   float: left;
   width: 245px;
   height: 13px;
@@ -376,26 +398,26 @@ a {
   -webkit-appearance: none;
   border: 1px solid #717171;
 }
-#modal-mine .field select.form-control {
+.field select.form-control {
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: 260px 10px;
   background-image: url("/img/down-arr.png");
 }
-#modal-mine .field .hint {
+.field .hint {
   float: left;
   margin-left: 10px;
   margin-top: 5px;
   color: #959595;
 }
-#modal-mine .field .hint i.icon-ok {
+.field .hint i.icon-ok {
   background-image: url("/img/icon-ok.png");
   width: 20px;
   height: 20px;
   display: inline-block;
   background-repeat: no-repeat;
 }
-#modal-mine .field .hint i.icon-warn {
+.field .hint i.icon-warn {
   background-image: url("/img/icon-warn.png");
   width: 13px;
   height: 15px;

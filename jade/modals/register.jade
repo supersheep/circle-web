@@ -1,11 +1,72 @@
-#modal-login.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+#modal-register.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-register-label', aria-hidden='true')
   .modal-dialog.modal-lg
     .modal-content
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-        h4#myModalLabel.modal-title Modal title
+        h4#modal-login-label.modal-title
       .modal-body
-        | ...
-      .modal-footer
-        button.btn.btn-default(type='button', data-dismiss='modal') Close
-        button.btn.btn-primary(type='button') Save changes
+        .head
+          h2.title 注册用户
+          p 请填写下表来在 circle 注册。我们将会保存您提供的资料以方便您在网上购物。  
+        .bd
+          .block.account
+            .field
+              .name 账户信息
+              input.form-control
+              .hint 
+            .field
+              .name 电子邮箱地址 *
+              input.form-control
+              .hint 请输入收货人的姓名
+            .field
+              .name 密码 *
+              input.form-control
+              .hint 
+            .field
+              .name 重复密码 *
+              input.form-control
+              .hint 
+          .block.profile      
+            .field
+              .name 姓名 *
+              input.form-control
+              .hint 请输入收货人的姓名
+            .field
+              .name 直辖市/省 *
+              select.form-control 选择
+                option 浙江
+                option 江苏
+              .hint
+            .field
+              .name 市 *
+              select.form-control 
+                option --
+                option 上海
+                option 广州
+            .field
+              .name 县区 *
+              select.form-control
+                option 闵行
+              .hint 
+            .field
+              .name 国家 *
+              select.form-control
+                option 尼加拉瓜
+                option 尼日利亚
+              .hint 
+            .field
+              .name 详细地址 *
+              input.form-control
+              .hint
+                i.icon-warn 
+                | 此项为必填
+            .field
+              .name 邮政编码 *
+              input.form-control
+              .hint 
+            .field
+              .name 联系方式 *
+              input.form-control
+              .hint
+                i.icon-ok
+          .btn(style="display:block; margin:20px auto;width:200px;") 注册新用户

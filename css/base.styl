@@ -243,46 +243,67 @@ a
             border-bottom:1px dashed #000
     .tabbody.active
         display: block
-    .field
-        clearfix()
-        margin-top: 15px
-        .name
-            float: left
-            width: 145px
-        .form-control
-            float: left
-            width: 245px
-            height: 13px
+    
+#modal-register
+    .head
+        h2
+            font-weight: bold
             font-size: 12px
-            padding: 7px 15px
-            border-radius: 0
-            box-sizing: content-box
-            -webkit-appearance: none
-            border: 1px solid #717171
-        select.form-control
-            cursor: pointer
+        p
+            font-size: 12px
+            margin-bottom: 10px
+    .modal-body
+        width: 675px
+        margin: 0 auto
+    .title
+        margin-bottom: 5px
+    .head
+        border-bottom: 1px dashed #000
+    .block
+        padding-bottom: 15px
+        border-bottom: 1px dashed #b5b1af
+
+
+.field
+    clearfix()
+    margin-top: 15px
+    .name
+        float: left
+        width: 145px
+    .form-control
+        float: left
+        width: 245px
+        height: 13px
+        font-size: 12px
+        padding: 7px 15px
+        border-radius: 0
+        box-sizing: content-box
+        -webkit-appearance: none
+        border: 1px solid #717171
+    select.form-control
+        cursor: pointer
+        background-repeat: no-repeat
+        background-position: 260px 10px
+        background-image: url("/img/down-arr.png")
+    .hint
+        float: left
+        margin-left: 10px
+        margin-top: 5px
+        color: #959595
+        i.icon-ok
+            background-image: url("/img/icon-ok.png")
+            width: 20px
+            height: 20px
+            display: inline-block
             background-repeat: no-repeat
-            background-position: 260px 10px
-            background-image: url("/img/down-arr.png")
-        .hint
-            float: left
-            margin-left: 10px
-            margin-top: 5px
-            color: #959595
-            i.icon-ok
-                background-image: url("/img/icon-ok.png")
-                width: 20px
-                height: 20px
-                display: inline-block
-                background-repeat: no-repeat
-            i.icon-warn
-                background-image: url("/img/icon-warn.png")
-                width: 13px
-                height: 15px
-                display: inline-block
-                position: relative
-                top: 3px
-                margin-right: 5px
+        i.icon-warn
+            background-image: url("/img/icon-warn.png")
+            width: 13px
+            height: 15px
+            display: inline-block
+            position: relative
+            top: 3px
+            margin-right: 5px
 
 @import "modals/intro"
 @import "modals/address"
