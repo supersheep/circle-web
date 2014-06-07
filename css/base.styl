@@ -19,6 +19,7 @@ a
     height: 60px
     width: 100%
     position: fixed
+    z-index: 1
     background-image: url('/img/bg.png')
 
 .header
@@ -29,11 +30,11 @@ a
         display: block
         float: left
     .nav
-        li a
-            padding: 25px 40px 10px 40px
+        .menu-item
+            padding: 25px 40px 17px 40px
     .user
         float: right
-        li a
+        .menu-item
             padding: 25px 15px 10px 15px
         .mine
             display: block
@@ -41,6 +42,27 @@ a
             color: #fff
             font-size: 12px
             padding: 25px 15px 10px 15px
+    .dropdown-menu
+        border-radius: 0
+        box-shadow: none
+        background-color: #191f1f
+        margin-top: 10px
+        &:after
+            content:""
+            border-width: 10px
+            border-style: solid
+            border-color: transparent transparent #191f1f transparent
+            position: absolute
+            width: 0
+            height: 0
+            left: 50px
+            top: -20px
+        > li > a
+            color: #fff
+            padding: 10px 
+            border-bottom: 1px dashed #414141
+            &:hover
+                background-color: #101313
 
 .footer
     background-image: url('/img/bg.png')
@@ -48,7 +70,7 @@ a
     bottom: 0
     width: 100%
     height: 60px
-    .nav a,.nav span
+    .nav .menu-item
         padding: 15px 20px 10px 20px
     .social
         float: right
@@ -69,9 +91,9 @@ a
 
 .nav
     float: left
-    li
+    .item
         float: left
-        a,span
+        .menu-item
             display: block
             color: #fff
             font-size: 12px

@@ -1,6 +1,6 @@
 mixin item(link,text)
-    li
-        a(href="#{link}") #{text}
+    li.item
+        a.menu-item(href="#{link}") #{text}
 
 doctype html
 html(lang="en")
@@ -18,17 +18,24 @@ html(lang="en")
                 a.brand(href="/html")
                     img(src="/img/brand.png")
                 ul.nav
-                    +item("/html/list.html","轻彩宝")
+                    li.dropdown.item
+                        a.menu-item.dropdown-toggle(href='javascript:;',data-toggle="dropdown") 轻彩宝
+                        ul.dropdown-menu
+                            li
+                                a(href="/html/detail.html") 爱，从自己开始
+                            li
+                                a(href="/html/detail.html") 闺蜜的果香
+                                
                     +item("/html/list.html","高级彩宝")
                     +item("/html/brand.html","品牌故事")
                     +item("/html","My Circle")
                 .user
                     ul.nav
                         li
-                            a(href="javascript:;",data-toggle="modal",data-target="#modal-login") 登录
+                            a.menu-item(href="javascript:;",data-toggle="modal",data-target="#modal-login") 登录
                         li
-                            a(href="javascript:;",data-toggle="modal",data-target="#modal-register") 注册
-                    a.mine(href="#",data-toggle="modal",data-target="#modal-mine")
+                            a.menu-item(href="javascript:;",data-toggle="modal",data-target="#modal-register") 注册
+                    a.menu-item.mine(href="#",data-toggle="modal",data-target="#modal-mine")
                         | Morning, 王同学
 
 
@@ -39,13 +46,10 @@ html(lang="en")
             .container
                 ul.nav
                     li
-                        span @2014 circle
-                    li
-                        a(href="/html/contact.html") 联系我们
-                    li
-                        a(href="/html/privacy.html") 隐私政策
-                    li
-                        a(href="/html/brand.html") 使用条款
+                        span.menu-item @2014 circle
+                    +item("/html/contact.html","联系我们")
+                    +item("/html/privacy.html","隐私政策")
+                    +item("/html/brand.html","使用条款")
                 .social
                     span 与我们互动
                     img(src="/img/weixin.png")
